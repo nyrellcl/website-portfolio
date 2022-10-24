@@ -225,9 +225,6 @@ ul {
     height: inherit;
     justify-content: space-evenly;
   }
-  .footer-container .footer-bar a {
-    color: #161d22;
-  }
   .footer-container .footer-bar__list {
     display: flex;
     flex-direction: column;
