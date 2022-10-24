@@ -472,6 +472,9 @@
 
         .footer-bar {
             flex-direction: row;
+            a{
+                color: $deep-blue;
+            }
             .resume-btn{
                 transition: all 350ms ease-in-out;
                 &:hover{

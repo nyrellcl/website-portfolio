@@ -435,6 +435,9 @@ ul {
   .footer-container .footer-bar .resume-btn {
     transition: all 350ms ease-in-out;
   }
+  .footer-container .footer-bar .resume-btn a {
+    color: #161d22;
+  }
   .footer-container .footer-bar .resume-btn:hover {
     cursor: pointer;
     transform: scale(1.1);
