@@ -286,6 +286,7 @@ ul {
     background-color: #1d3d59;
     z-index: 10;
     position: fixed;
+    opacity: 0.98;
   }
   .header-bg .desktop-nav-bar__list {
     padding-right: 1rem;
