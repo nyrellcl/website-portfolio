@@ -356,7 +356,6 @@ ul {
     width: 85%;
     margin: 0 auto;
     line-height: normal;
-    font-size: 24px;
   }
   .intro-wrapper__container__skills__list {
     text-align: center;
@@ -367,6 +366,9 @@ ul {
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
+  }
+  .intro-wrapper__container__content p {
+    font-size: 24px;
   }
   .footer-container {
     height: 20vh;
