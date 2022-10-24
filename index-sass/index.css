@@ -270,6 +270,9 @@ body {
     height: inherit;
     justify-content: space-evenly;
   }
+  .footer-container .footer-bar a {
+    color: #161d22;
+  }
   .footer-container .footer-bar__list {
     display: flex;
     flex-direction: column;
@@ -490,9 +493,6 @@ body {
   }
   .footer-container .footer-bar {
     flex-direction: row;
-  }
-  .footer-container .footer-bar a {
-    color: #161d22;
   }
   .footer-container .footer-bar .resume-btn {
     transition: all 350ms ease-in-out;
