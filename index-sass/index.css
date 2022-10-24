@@ -116,6 +116,7 @@ body {
   /*sets the background of the menu once user opens the icon. I want to make this transition more seamless. (future update)*/
   background-color: #161d22;
   text-align: right;
+  opacity: 0.98;
 }
 .mobile-menu a {
   color: #efefef;
@@ -351,6 +352,7 @@ body {
     width: 100%;
     background: inherit;
     z-index: 10;
+    opacity: 0.98;
   }
   .header-bg .desktop-nav-bar__list {
     padding-right: 1rem;

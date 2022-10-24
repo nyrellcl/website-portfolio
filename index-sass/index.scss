@@ -119,6 +119,7 @@ body {
     /*sets the background of the menu once user opens the icon. I want to make this transition more seamless. (future update)*/
     background-color: $deep-blue;
     text-align: right;
+    opacity: 0.98;
 
     a {
         color: $body;
@@ -419,6 +420,7 @@ body {
             width: 100%;
             background: inherit;
             z-index: 10;
+            opacity: 0.98;
             &__list{
                 padding-right: 1rem;
                 a{
