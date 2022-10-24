@@ -95,7 +95,7 @@ ul {
   margin-bottom: 10px;
 }
 
-@media only screen and (min-width: 375px) {
+@media only screen and (min-width: 360px) {
   .desktop-nav-bar {
     display: none;
   }
