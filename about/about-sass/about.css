@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans&family=Montserrat:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+#ham-icon {
+  margin: auto 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 2rem;
+  justify-content: flex-start;
+}
+
+#ham-icon div {
+  width: 30px;
+  height: 4px;
+  background-color: #161d22;
+  margin: 3px 0;
+  transition: 0.4s;
+  z-index: 5;
+}
+
+.ham-container {
+  display: none;
+  width: 100%;
+}
+
+/*will rotate counterclockwise once user presses the icon which will form an X along with bar2*/
+.open .bar1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+.open .bar2 {
+  opacity: 0;
+}
+.open .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  /*stacks each link on top of each other on mobile*/
+  justify-content: center;
+  z-index: 3;
+  height: 100vh;
+  margin-left: auto;
+  top: 0;
+  width: 80%;
+  right: 0;
+  box-shadow: -1px 9px 90px 180px rgba(45, 50, 77, 0.3490196078);
+  list-style: none;
+  font-family: "Alata", sans-serif;
+  transition: top 0.5s ease-in-out;
+  opacity: 0.98;
+}
+.open .mobile-menu li {
+  padding: 0.5rem;
+}
+
+/*once user opens the icon the links will display in a stacked view*/
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  /*fixed height of header*/
+  left: 0;
+  top: 100%;
+  height: calc(70vh - 50px);
+  /*takes the full remaining space of site hence width 100. set the height to 100 and subtract it from the height of header*/
+  width: 100%;
+  font-size: 3.5rem;
+  /*sets the background of the menu once user opens the icon. I want to make this transition more seamless. (future update)*/
+  background-color: #efefef;
+  text-align: right;
+}
+.mobile-menu a {
+  color: #161d22;
+}
+.mobile-menu li {
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 375px) {
+  #about {
+    background-color: #1d3d59;
+    color: #efefef;
+  }
+  .ham-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 3rem;
+  }
+  .desktop-nav-bar {
+    display: none;
+  }
+  ion-icon {
+    font-size: 4rem;
+    position: absolute;
+    top: 75%;
+    left: 44%;
+    margin: 0 auto;
+    color: #1d3d59;
+    transition: transform 300ms ease-in-out;
+  }
+  ion-icon:not([disabled]):hover {
+    transform: scale(1.1);
+  }
+  .header-bg .about-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+  }
+  .header-bg .about-container__title span {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 72px;
+    position: absolute;
+  }
+  .header-bg .about-container__title span:first-child {
+    top: 1%;
+    left: 15%;
+  }
+  .header-bg .about-container__title span:nth-child(2) {
+    top: 11%;
+    left: 30%;
+  }
+  .header-bg .about-container__title span:nth-child(3) {
+    top: 21%;
+    left: 40%;
+  }
+  .header-bg .about-container__title span:nth-child(4) {
+    top: 31%;
+    left: 55%;
+  }
+  .header-bg .about-container__title span:nth-child(5) {
+    top: 41%;
+    left: 70%;
+  }
+  .header-bg .about-container__title span:nth-child(6) {
+    left: 30%;
+  }
+  .header-bg .about-container__title span:nth-child(7) {
+    top: 61%;
+  }
+  .intro-wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .intro-wrapper__container {
+    font-family: "Alata", sans-serif;
+  }
+  .intro-wrapper__container h1 {
+    font-size: 74px;
+    padding: 1rem;
+    text-align: center;
+  }
+  .intro-wrapper__container p {
+    line-height: 1.75rem;
+  }
+  .intro-wrapper__container .line {
+    width: 200px;
+    height: 3px;
+    background-color: #efefef;
+    margin: 0 auto;
+  }
+  .intro-wrapper__container__content {
+    margin: 3rem auto;
+    font-size: 1.125rem;
+  }
+  .intro-wrapper__container__skills {
+    padding-bottom: 15rem;
+  }
+  .intro-wrapper__container__skills h2 {
+    font-size: 3rem;
+    margin: 4rem auto 2rem auto;
+  }
+  .intro-wrapper__container__skills__list {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: repeat(2, 2fr);
+    gap: 2rem;
+  }
+  .intro-wrapper__container__skills__list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .footer-container {
+    height: 40vh;
+    background-color: #161d22;
+  }
+  .footer-container .footer-bar {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1.5rem;
+    height: inherit;
+    justify-content: space-evenly;
+  }
+  .footer-container .footer-bar__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "Montserrat", sans-serif;
+    gap: 0.75rem;
+    font-size: 1.125rem;
+  }
+  .footer-container .footer-bar__list a {
+    color: #efefef;
+  }
+  .footer-container .footer-bar .resume-btn {
+    width: 200px;
+    height: 50px;
+    font-family: "Montserrat", sans-serif;
+    background-color: #efefef;
+    border: none;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+  .footer-container .footer-bar .attribution {
+    font-family: "Montserrat", sans-serif;
+    color: #efefef;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .ham-container {
+    display: none;
+  }
+  .header-bg .desktop-nav-bar {
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    margin-right: 1rem;
+  }
+  .header-bg .desktop-nav-bar__list {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin-left: auto;
+    justify-content: space-between;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.125rem;
+  }
+  .header-bg .desktop-nav-bar__list a {
+    color: #161d22;
+  }
+  .header-bg .about-container__title span:nth-child(6) {
+    left: 35%;
+  }
+  .intro-wrapper__container__skills h2 {
+    font-size: 4rem;
+    width: 70%;
+    margin: 4rem 0;
+  }
+  .intro-wrapper__container__skills__list {
+    align-content: center;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  ion-icon {
+    top: 85%;
+    left: 50%;
+  }
+  .header-bg .desktop-nav-bar {
+    width: 100%;
+    background: #fff;
+    z-index: 10;
+    position: fixed;
+  }
+  .header-bg .desktop-nav-bar__list {
+    padding-right: 1rem;
+  }
+  .header-bg .desktop-nav-bar__list a {
+    position: relative;
+  }
+  .header-bg .desktop-nav-bar__list a::before {
+    content: "";
+  }
+  .header-bg .desktop-nav-bar__list a::before,
+.header-bg .desktop-nav-bar__list a *::after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    top: 100%;
+    left: 0;
+  }
+  .header-bg .desktop-nav-bar__list a::before {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+  }
+  .header-bg .desktop-nav-bar__list a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+  }
+  .header-bg .about-container__title span {
+    font-size: 100px;
+  }
+  .header-bg .about-container__title span:first-child {
+    top: 10%;
+    left: 25%;
+  }
+  .header-bg .about-container__title span:nth-child(2) {
+    top: 24%;
+    left: 35%;
+  }
+  .header-bg .about-container__title span:nth-child(3) {
+    top: 37%;
+    left: 42%;
+  }
+  .header-bg .about-container__title span:nth-child(4) {
+    top: 48%;
+    left: 52%;
+  }
+  .header-bg .about-container__title span:nth-child(5) {
+    top: 61%;
+    left: 62%;
+  }
+  .header-bg .about-container__title span:nth-child(6) {
+    top: 60%;
+    left: 38%;
+  }
+  .header-bg .about-container__title span:nth-child(7) {
+    top: 71%;
+  }
+  .intro-wrapper__container p {
+    width: 85%;
+    margin: 0 auto;
+    line-height: normal;
+    font-size: 24px;
+  }
+  .intro-wrapper__container__skills__list {
+    text-align: center;
+  }
+  .intro-wrapper__container__content {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .footer-container {
+    height: 20vh;
+  }
+  .footer-container .footer-bar {
+    flex-direction: row;
+  }
+  .footer-container .footer-bar .resume-btn {
+    transition: all 350ms ease-in-out;
+  }
+  .footer-container .footer-bar .resume-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .footer-container .footer-bar .resume-btn:active {
+    transform: translateY(10px);
+  }
+  .footer-container .footer-bar__list {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .footer-container .footer-bar__list a {
+    position: relative;
+  }
+  .footer-container .footer-bar__list a::before {
+    content: "";
+  }
+  .footer-container .footer-bar__list a::before,
+.footer-container .footer-bar__list a *::after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    top: 100%;
+    left: 0;
+  }
+  .footer-container .footer-bar__list a::before {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+  }
+  .footer-container .footer-bar__list a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+  }
+}/*# sourceMappingURL=about.css.map */

@@ -1,0 +1,569 @@
+@import "./base/base";
+
+@import "./colors/colors";
+
+@import "./fonts/fonts";
+
+@import "./mixin/mixin";
+
+#ham-icon {
+    margin: auto 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 2rem;
+    justify-content: flex-start;
+}
+
+//sets colors of the bars
+#ham-icon div {
+    width: 30px;
+    height: 4px;
+    background-color: $deep-blue;
+    margin: 3px 0;
+    transition: 0.4s;
+    z-index: 5;
+}
+
+//mobile menu
+
+.ham-container {
+    display: none;
+    width: 100%;
+}
+
+/*will rotate counterclockwise once user presses the icon which will form an X along with bar2*/
+.open {
+
+    .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+        transform: rotate(-45deg) translate(-6px, 6px);
+    }
+
+    .bar2 {
+        opacity: 0;
+    }
+
+    .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        /*stacks each link on top of each other on mobile*/
+        justify-content: center;
+        z-index: 3;
+        height: 100vh;
+        margin-left: auto;
+        top: 0;
+        width: 80%;
+        right: 0;
+        box-shadow: -1px 9px 90px 180px #2d324d59;
+        list-style: none;
+        font-family: $alata, $sans;
+        transition: top 0.5s ease-in-out;
+        opacity: 0.98;
+
+        li {
+            padding: 0.5rem;
+        }
+    }
+}
+
+
+/*once user opens the icon the links will display in a stacked view*/
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    /*fixed height of header*/
+    left: 0;
+    top: 100%;
+    height: calc(70vh - 50px);
+    /*takes the full remaining space of site hence width 100. set the height to 100 and subtract it from the height of header*/
+    width: 100%;
+    font-size: 3.5rem;
+    /*sets the background of the menu once user opens the icon. I want to make this transition more seamless. (future update)*/
+    background-color: $body;
+    text-align: right;
+
+    a {
+        color: $deep-blue;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+}
+
+//fade animation
+.fade {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+
+.fade.appear {
+    opacity: 1;
+}
+
+.from-left,
+.right {
+    transition: opacity 250ms ease-in, transform 400ms ease-in;
+    opacity: 0;
+
+}
+
+.from-left {
+    transform: translateX(-50%);
+}
+
+.right {
+    transform: translateX(50%);
+}
+
+.from-left.appear,
+.right.appear {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+@media only screen and (min-width: 375px) {
+    #css-art {
+        overflow-x: hidden;
+    }
+
+    #cactus,
+    #spaceship,
+    #boba {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        height: 100%;
+        justify-content: space-evenly;
+        margin: 10rem auto;
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+
+    .ham-container {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 3rem;
+    }
+
+    .desktop-nav-bar {
+        display: none;
+    }
+
+    .explore-container {
+        height: 100vh;
+        font-family: $alata, $sans;
+
+        h1 {
+            font-size: 74px;
+            text-transform: capitalize;
+            width: 85%;
+
+            .art-highlight {
+                -webkit-text-stroke: 3px #fff;
+                text-shadow: 5px 5px 0px #000000;
+                color: $intro-bg;
+                font-family: 'Arvo', serif;
+            }
+        }
+
+        &__content {
+            height: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 85%;
+            margin: 0 auto;
+
+            &__description {
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+
+                p {
+                    font-size: 1.125rem;
+                }
+            }
+
+            &__btn {
+                margin: 0 auto;
+
+                button {
+                    font-family: $alata, $sans;
+                    width: 220px;
+                    height: 48px;
+                    border-radius: 10px;
+                    border: none;
+                    font-size: 1.125rem;
+                    background-color: $intro-bg;
+                    color: $body;
+                    transition: all 350ms ease-in-out;
+
+                }
+            }
+        }
+    }
+
+    .art-heading {
+        font-family: $alata, $sans;
+        width: 85%;
+        margin: 0 auto;
+
+        h2 {
+            font-size: 64px;
+        }
+
+        .line {
+            width: 44px;
+            height: 5px;
+            background-color: $intro-bg;
+        }
+    }
+
+    //art descriptions
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        width: 100%;
+        font-family: $alata, $sans;
+        text-align: center;
+
+        h3 {
+            font-size: 2rem;
+        }
+
+        p {
+            width: 90%;
+        }
+
+        &__btn__container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            .live-site,
+            .code {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                border: none;
+                font-size: 1.5rem;
+            }
+
+            .live-site {
+                background-color: $intro-bg;
+                color: $body;
+            }
+
+            .code {
+                background-color: $body;
+                color: $deep-blue;
+            }
+        }
+    }
+
+    .footer-container {
+        height: 40vh;
+        background-color: $deep-blue;
+
+        .footer-bar {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 1.5rem;
+            height: inherit;
+            justify-content: space-evenly;
+
+            &__list {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                font-family: $mont, $sans;
+                gap: 0.75rem;
+                font-size: 1.125rem;
+
+                a {
+                    color: $body;
+                }
+            }
+
+            .resume-btn {
+                width: 200px;
+                height: 50px;
+                font-family: $mont, $sans;
+                background-color: $body;
+                border: none;
+                font-size: 1rem;
+                border-radius: 10px;
+            }
+
+            .attribution {
+                font-family: $mont, $sans;
+                color: $body;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    #cactus,
+    #spaceship,
+    #boba {
+        margin: 6rem auto;
+    }
+
+    img {
+        width: 320px;
+        height: 320px;
+    }
+
+    .ham-container {
+        display: none;
+    }
+
+    .desktop-nav-bar {
+        display: flex;
+        height: 10vh;
+        align-items: center;
+        margin-right: 1rem;
+
+        &__list {
+            display: flex;
+            align-items: center;
+            width: 40%;
+            margin-left: auto;
+            justify-content: space-between;
+            font-family: $mont, $sans;
+            font-size: 1.125rem;
+
+            a {
+                color: $deep-blue;
+            }
+        }
+    }
+
+    .explore-container {
+        text-align: center;
+
+        h1 {
+            text-align: center;
+            width: 100%;
+        }
+
+        &__content {
+            &__description {
+
+                p {
+                    font-size: 1.75rem;
+                }
+            }
+        }
+    }
+
+    .description {
+        width: 90%;
+
+        p {
+            font-size: 1.25rem;
+        }
+
+        &__btn__container {
+
+            .live-site,
+            .code {
+                transition: all 350ms ease-in-out;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
+
+                &:active {
+                    transform: translateY(10px);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    #cactus,
+    #spaceship {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    #boba {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    img {
+        width: 500px;
+        height: 500px;
+        margin: 0 2rem;
+
+    }
+
+
+    .desktop-nav-bar {
+        width: 100%;
+        background: #fff;
+        z-index: 10;
+        position: fixed;
+
+        &__list {
+            padding-right: 1rem;
+
+            a {
+                position: relative;
+
+                &::before {
+                    content: '';
+                }
+
+                &::before,
+                *::after {
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    background-color: currentColor;
+                    top: 100%;
+                    left: 0
+                }
+
+                &::before {
+                    transform-origin: 100% 50%;
+                    transform: scale3d(0, 1, 1);
+                    transition: transform 0.3s;
+                }
+
+                &:hover::before {
+                    transform-origin: 0% 50%;
+                    transform: scale3d(1, 1, 1);
+                }
+            }
+        }
+    }
+
+    .explore-container {
+        &__content {
+            flex-direction: row;
+            width: 100%;
+            align-items: center;
+
+            h1 {
+                font-size: 100px;
+                z-index: 10;
+            }
+
+            &__description {
+                justify-content: center;
+                padding: 0 2rem;
+            }
+
+            &__btn {
+                button {
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.1);
+                    }
+
+                    &:active {
+                        transform: translateY(10px);
+                    }
+                }
+            }
+        }
+    }
+
+    .description {
+        h3 {
+            font-size: 3rem;
+        }
+
+        p {
+            text-align: left;
+        }
+    }
+
+    .footer-container {
+        height: 20vh;
+
+        .footer-bar {
+            flex-direction: row;
+
+            .resume-btn {
+                transition: all 350ms ease-in-out;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
+
+                &:active {
+                    transform: translateY(10px);
+                }
+            }
+
+            &__list {
+                flex-direction: row;
+                gap: 2rem;
+
+                a {
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                    }
+
+                    &::before,
+                    *::after {
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        background-color: currentColor;
+                        top: 100%;
+                        left: 0
+                    }
+
+                    &::before {
+                        transform-origin: 100% 50%;
+                        transform: scale3d(0, 1, 1);
+                        transition: transform 0.3s;
+                    }
+
+                    &:hover::before {
+                        transform-origin: 0% 50%;
+                        transform: scale3d(1, 1, 1);
+                    }
+                }
+            }
+        }
+    }
+}

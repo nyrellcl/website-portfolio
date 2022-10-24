@@ -1,0 +1,473 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Arvo:wght@700&family=Josefin+Sans&family=Montserrat:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+#ham-icon {
+  margin: auto 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 2rem;
+  justify-content: flex-start;
+}
+
+#ham-icon div {
+  width: 30px;
+  height: 4px;
+  background-color: #161d22;
+  margin: 3px 0;
+  transition: 0.4s;
+  z-index: 5;
+}
+
+.ham-container {
+  display: none;
+  width: 100%;
+}
+
+/*will rotate counterclockwise once user presses the icon which will form an X along with bar2*/
+.open .bar1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+.open .bar2 {
+  opacity: 0;
+}
+.open .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  /*stacks each link on top of each other on mobile*/
+  justify-content: center;
+  z-index: 3;
+  height: 100vh;
+  margin-left: auto;
+  top: 0;
+  width: 80%;
+  right: 0;
+  box-shadow: -1px 9px 90px 180px rgba(45, 50, 77, 0.3490196078);
+  list-style: none;
+  font-family: "Alata", sans-serif;
+  transition: top 0.5s ease-in-out;
+  opacity: 0.98;
+}
+.open .mobile-menu li {
+  padding: 0.5rem;
+}
+
+/*once user opens the icon the links will display in a stacked view*/
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  /*fixed height of header*/
+  left: 0;
+  top: 100%;
+  height: calc(70vh - 50px);
+  /*takes the full remaining space of site hence width 100. set the height to 100 and subtract it from the height of header*/
+  width: 100%;
+  font-size: 3.5rem;
+  /*sets the background of the menu once user opens the icon. I want to make this transition more seamless. (future update)*/
+  background-color: #efefef;
+  text-align: right;
+}
+.mobile-menu a {
+  color: #161d22;
+}
+.mobile-menu li {
+  margin-bottom: 10px;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.fade.appear {
+  opacity: 1;
+}
+
+.from-left,
+.right {
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
+  opacity: 0;
+}
+
+.from-left {
+  transform: translateX(-50%);
+}
+
+.right {
+  transform: translateX(50%);
+}
+
+.from-left.appear,
+.right.appear {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+@media only screen and (min-width: 375px) {
+  #css-art {
+    overflow-x: hidden;
+  }
+  #cactus,
+#spaceship,
+#boba {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100%;
+    justify-content: space-evenly;
+    margin: 10rem auto;
+  }
+  img {
+    width: 300px;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 50%;
+  }
+  .ham-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 3rem;
+  }
+  .desktop-nav-bar {
+    display: none;
+  }
+  .explore-container {
+    height: 100vh;
+    font-family: "Alata", sans-serif;
+  }
+  .explore-container h1 {
+    font-size: 74px;
+    text-transform: capitalize;
+    width: 85%;
+  }
+  .explore-container h1 .art-highlight {
+    -webkit-text-stroke: 3px #fff;
+    text-shadow: 5px 5px 0px #000000;
+    color: #1d3d59;
+    font-family: "Arvo", serif;
+  }
+  .explore-container__content {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 85%;
+    margin: 0 auto;
+  }
+  .explore-container__content__description {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .explore-container__content__description p {
+    font-size: 1.125rem;
+  }
+  .explore-container__content__btn {
+    margin: 0 auto;
+  }
+  .explore-container__content__btn button {
+    font-family: "Alata", sans-serif;
+    width: 220px;
+    height: 48px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.125rem;
+    background-color: #1d3d59;
+    color: #efefef;
+    transition: all 350ms ease-in-out;
+  }
+  .art-heading {
+    font-family: "Alata", sans-serif;
+    width: 85%;
+    margin: 0 auto;
+  }
+  .art-heading h2 {
+    font-size: 64px;
+  }
+  .art-heading .line {
+    width: 44px;
+    height: 5px;
+    background-color: #1d3d59;
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    font-family: "Alata", sans-serif;
+    text-align: center;
+  }
+  .description h3 {
+    font-size: 2rem;
+  }
+  .description p {
+    width: 90%;
+  }
+  .description__btn__container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  .description__btn__container .live-site,
+.description__btn__container .code {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.5rem;
+  }
+  .description__btn__container .live-site {
+    background-color: #1d3d59;
+    color: #efefef;
+  }
+  .description__btn__container .code {
+    background-color: #efefef;
+    color: #161d22;
+  }
+  .footer-container {
+    height: 40vh;
+    background-color: #161d22;
+  }
+  .footer-container .footer-bar {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1.5rem;
+    height: inherit;
+    justify-content: space-evenly;
+  }
+  .footer-container .footer-bar__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "Montserrat", sans-serif;
+    gap: 0.75rem;
+    font-size: 1.125rem;
+  }
+  .footer-container .footer-bar__list a {
+    color: #efefef;
+  }
+  .footer-container .footer-bar .resume-btn {
+    width: 200px;
+    height: 50px;
+    font-family: "Montserrat", sans-serif;
+    background-color: #efefef;
+    border: none;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+  .footer-container .footer-bar .attribution {
+    font-family: "Montserrat", sans-serif;
+    color: #efefef;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #cactus,
+#spaceship,
+#boba {
+    margin: 6rem auto;
+  }
+  img {
+    width: 320px;
+    height: 320px;
+  }
+  .ham-container {
+    display: none;
+  }
+  .desktop-nav-bar {
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    margin-right: 1rem;
+  }
+  .desktop-nav-bar__list {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin-left: auto;
+    justify-content: space-between;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.125rem;
+  }
+  .desktop-nav-bar__list a {
+    color: #161d22;
+  }
+  .explore-container {
+    text-align: center;
+  }
+  .explore-container h1 {
+    text-align: center;
+    width: 100%;
+  }
+  .explore-container__content__description p {
+    font-size: 1.75rem;
+  }
+  .description {
+    width: 90%;
+  }
+  .description p {
+    font-size: 1.25rem;
+  }
+  .description__btn__container .live-site,
+.description__btn__container .code {
+    transition: all 350ms ease-in-out;
+  }
+  .description__btn__container .live-site:hover,
+.description__btn__container .code:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .description__btn__container .live-site:active,
+.description__btn__container .code:active {
+    transform: translateY(10px);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #cactus,
+#spaceship {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  #boba {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  img {
+    width: 500px;
+    height: 500px;
+    margin: 0 2rem;
+  }
+  .desktop-nav-bar {
+    width: 100%;
+    background: #fff;
+    z-index: 10;
+    position: fixed;
+  }
+  .desktop-nav-bar__list {
+    padding-right: 1rem;
+  }
+  .desktop-nav-bar__list a {
+    position: relative;
+  }
+  .desktop-nav-bar__list a::before {
+    content: "";
+  }
+  .desktop-nav-bar__list a::before,
+.desktop-nav-bar__list a *::after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    top: 100%;
+    left: 0;
+  }
+  .desktop-nav-bar__list a::before {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+  }
+  .desktop-nav-bar__list a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+  }
+  .explore-container__content {
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+  }
+  .explore-container__content h1 {
+    font-size: 100px;
+    z-index: 10;
+  }
+  .explore-container__content__description {
+    justify-content: center;
+    padding: 0 2rem;
+  }
+  .explore-container__content__btn button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .explore-container__content__btn button:active {
+    transform: translateY(10px);
+  }
+  .description h3 {
+    font-size: 3rem;
+  }
+  .description p {
+    text-align: left;
+  }
+  .footer-container {
+    height: 20vh;
+  }
+  .footer-container .footer-bar {
+    flex-direction: row;
+  }
+  .footer-container .footer-bar .resume-btn {
+    transition: all 350ms ease-in-out;
+  }
+  .footer-container .footer-bar .resume-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .footer-container .footer-bar .resume-btn:active {
+    transform: translateY(10px);
+  }
+  .footer-container .footer-bar__list {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .footer-container .footer-bar__list a {
+    position: relative;
+  }
+  .footer-container .footer-bar__list a::before {
+    content: "";
+  }
+  .footer-container .footer-bar__list a::before,
+.footer-container .footer-bar__list a *::after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    top: 100%;
+    left: 0;
+  }
+  .footer-container .footer-bar__list a::before {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+  }
+  .footer-container .footer-bar__list a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+  }
+}/*# sourceMappingURL=art.css.map */

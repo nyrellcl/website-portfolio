@@ -1,0 +1,445 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Arvo:wght@700&family=Josefin+Sans&family=Montserrat:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+#ham-icon {
+  margin: auto 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 2rem;
+  justify-content: flex-start;
+}
+
+#ham-icon div {
+  width: 30px;
+  height: 4px;
+  background-color: #efefef;
+  margin: 3px 0;
+  transition: 0.4s;
+  z-index: 5;
+}
+
+.ham-container {
+  display: none;
+  width: 100%;
+}
+
+/*will rotate counterclockwise once user presses the icon which will form an X along with bar2*/
+.open .bar1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+.open .bar2 {
+  opacity: 0;
+}
+.open .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  /*stacks each link on top of each other on mobile*/
+  justify-content: center;
+  z-index: 3;
+  height: 100vh;
+  margin-left: auto;
+  top: 0;
+  width: 80%;
+  right: 0;
+  box-shadow: -1px 9px 90px 180px rgba(45, 50, 77, 0.3490196078);
+  list-style: none;
+  font-family: "Alata", sans-serif;
+  transition: top 0.5s ease-in-out;
+  opacity: 0.98;
+}
+.open .mobile-menu li {
+  padding: 0.5rem;
+}
+
+/*once user opens the icon the links will display in a stacked view*/
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  /*fixed height of header*/
+  left: 0;
+  top: 100%;
+  height: calc(70vh - 50px);
+  /*takes the full remaining space of site hence width 100. set the height to 100 and subtract it from the height of header*/
+  width: 100%;
+  font-size: 3.5rem;
+  /*sets the background of the menu once user opens the icon. I want to make this transition more seamless. (future update)*/
+  background-color: #161d22;
+  text-align: right;
+}
+.mobile-menu a {
+  color: #efefef;
+}
+.mobile-menu li {
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 375px) {
+  .desktop-nav-bar {
+    display: none;
+  }
+  .ham-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 3rem;
+  }
+  .header-bg {
+    background-color: #1d3d59;
+    height: 100vh;
+    font-family: "Alata", sans-serif;
+  }
+  .header-bg .project-intro-container {
+    height: 90%;
+  }
+  .header-bg .project-intro-container__contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: inherit;
+    gap: 4rem;
+  }
+  .header-bg .project-intro-container__contents h1 {
+    font-size: 74px;
+    color: #bababa;
+    padding: 0 2rem;
+  }
+  .header-bg .project-intro-container__contents .highlight {
+    color: #efefef;
+  }
+  .header-bg .project-intro-container__contents p {
+    color: #bababa;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.125rem;
+  }
+  .header-bg .project-intro-container__contents__btn {
+    margin: 0 auto;
+  }
+  .header-bg .project-intro-container__contents__btn button {
+    width: 220px;
+    height: 48px;
+    border: none;
+    background-color: #efefef;
+    color: #161d22;
+    font-family: "Alata", sans-serif;
+    font-size: 1.125rem;
+    border-radius: 10px;
+  }
+  .project-heading {
+    font-family: "Alata", sans-serif;
+    margin: 4rem auto;
+    padding: 0 2rem;
+  }
+  .project-heading h2 {
+    font-size: 64px;
+  }
+  .project-heading .line {
+    width: 44px;
+    height: 8px;
+    background: #1d3d59;
+  }
+  .projects-gallery {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    align-content: center;
+    justify-content: center;
+    gap: 10rem;
+    margin-bottom: 10rem;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Alata", sans-serif;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .card__details {
+    display: none;
+  }
+  .card-img img {
+    border-top-right-radius: 1.125rem;
+    border-top-left-radius: 1.125rem;
+    width: 100%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  }
+  .card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    position: relative;
+    top: -5px;
+    background-color: #1d3d59;
+    color: #efefef;
+    border-bottom-right-radius: 1.125rem;
+    border-bottom-left-radius: 1.125rem;
+    padding: 1rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  }
+  .card__content h3 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .card__content .view-proj {
+    color: #efefef;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #efefef;
+  }
+  .card__desktop {
+    display: none;
+  }
+  .footer-container {
+    height: 40vh;
+    background-color: #161d22;
+  }
+  .footer-container .footer-bar {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1.5rem;
+    height: inherit;
+    justify-content: space-evenly;
+  }
+  .footer-container .footer-bar__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "Montserrat", sans-serif;
+    gap: 0.75rem;
+    font-size: 1.125rem;
+  }
+  .footer-container .footer-bar__list a {
+    color: #efefef;
+  }
+  .footer-container .footer-bar .resume-btn {
+    width: 200px;
+    height: 50px;
+    font-family: "Montserrat", sans-serif;
+    background-color: #efefef;
+    border: none;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+  .footer-container .footer-bar .attribution {
+    font-family: "Montserrat", sans-serif;
+    color: #efefef;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .ham-container {
+    display: none;
+  }
+  .header-bg .desktop-nav-bar {
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    margin-right: 1rem;
+  }
+  .header-bg .desktop-nav-bar__list {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin-left: auto;
+    justify-content: space-between;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.125rem;
+  }
+  .header-bg .desktop-nav-bar__list a {
+    color: #efefef;
+  }
+  .header-bg .project-intro-container__contents h1 {
+    text-align: center;
+  }
+  .header-bg .project-intro-container__contents p {
+    font-size: 1.75rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .header-bg .desktop-nav-bar {
+    width: 100%;
+    background-color: #1d3d59;
+    z-index: 10;
+    position: fixed;
+  }
+  .header-bg .desktop-nav-bar__list {
+    padding-right: 1rem;
+  }
+  .header-bg .desktop-nav-bar__list a {
+    position: relative;
+  }
+  .header-bg .desktop-nav-bar__list a::before {
+    content: "";
+  }
+  .header-bg .desktop-nav-bar__list a::before,
+.header-bg .desktop-nav-bar__list a *::after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    top: 100%;
+    left: 0;
+  }
+  .header-bg .desktop-nav-bar__list a::before {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+  }
+  .header-bg .desktop-nav-bar__list a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+  }
+  .header-bg .project-intro-container {
+    height: 100%;
+  }
+  .header-bg .project-intro-container__contents h1 {
+    font-size: 100px;
+  }
+  .header-bg .project-intro-container__contents p {
+    width: 65%;
+  }
+  .header-bg .project-intro-container__contents__btn button {
+    transition: all 350ms ease-in-out;
+  }
+  .header-bg .project-intro-container__contents__btn button:hover, .header-bg .project-intro-container__contents__btn button:focus {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .header-bg .project-intro-container__contents__btn button:active {
+    transform: translateY(5px);
+  }
+  .projects-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-rows: repeat(4, 200px);
+    gap: 2rem;
+    margin-bottom: 0;
+  }
+  .card-wrapper {
+    height: 100%;
+  }
+  .card {
+    position: relative;
+  }
+  .card-img img {
+    border-radius: 1.125rem;
+  }
+  .card__content {
+    display: none;
+  }
+  .card__details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "Alata", sans-serif;
+    align-items: center;
+    background-color: #efefef;
+    -webkit-backdrop-filter: blur(2px) brightness(1.3);
+            backdrop-filter: blur(2px) brightness(1.3);
+    opacity: 0;
+    transition: opacity 350ms;
+  }
+  .card__details:hover {
+    opacity: 1;
+  }
+  .card__details__btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .card__details__btn .project, .card__details__btn .code {
+    width: 120px;
+    height: 46px;
+    font-family: "Alata", sans-serif;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 350ms ease-in-out;
+  }
+  .card__details__btn .project:hover, .card__details__btn .project:focus, .card__details__btn .code:hover, .card__details__btn .code:focus {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .card__details__btn .project:active, .card__details__btn .code:active {
+    transform: translateY(5px);
+  }
+  .card__details__btn .project {
+    background-color: #1d3d59;
+    color: #efefef;
+  }
+  .card__details__btn .code {
+    background-color: #bababa;
+  }
+  .footer-container {
+    height: 20vh;
+  }
+  .footer-container .footer-bar {
+    flex-direction: row;
+  }
+  .footer-container .footer-bar .resume-btn {
+    transition: all 350ms ease-in-out;
+  }
+  .footer-container .footer-bar .resume-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .footer-container .footer-bar .resume-btn:active {
+    transform: translateY(10px);
+  }
+  .footer-container .footer-bar__list {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .footer-container .footer-bar__list a {
+    position: relative;
+  }
+  .footer-container .footer-bar__list a::before {
+    content: "";
+  }
+  .footer-container .footer-bar__list a::before, .footer-container .footer-bar__list a *::after {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    top: 100%;
+    left: 0;
+  }
+  .footer-container .footer-bar__list a::before {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+  }
+  .footer-container .footer-bar__list a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+  }
+}/*# sourceMappingURL=projects.css.map */

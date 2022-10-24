@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3NCP28V9QM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-3NCP28V9QM');
+    </script>
+    <!-- End Google tag (gtag.js) -->
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NTPPP99');</script>
+    <!-- End Google Tag Manager -->
+    <meta name="description" content="Nyrell Leonor's personal website portfolio showcasing
+            self-led projects and technical skills">
+    <meta name="keywords"
+        content="HTML, CSS, SASS, SCSS, JavaScript, Front-End Engineer, Web Development, CSS Art, Web Design">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/621f5eb709.js" crossorigin="anonymous" defer></script>
+    <script src="./art.js" defer></script>
+    <link rel="stylesheet" href="./art-scss/art.css">
+    <title>Nyrell Leonor - Art</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <nav class="desktop-nav-bar">
+                <ul class="desktop-nav-bar__list">
+                    <li><a href="https://www.nyrellcl.com/">Home</a></li>
+                    <li><a href="/about/about.html">About</a></li>
+                    <li><a href="/">Art</a></li>
+                    <li><a href="/projects/projects.html">Projects</a></li>
+                </ul>
+            </nav>
+
+            <div class="ham-container">
+                <div id="ham-icon" onclick="toggleMobileMenu(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                    <ul class="mobile-menu">
+                        <li><a href="https://www.nyrellcl.com/">Home</a></li>
+                        <li><a href="/about/about.html">About</a></li>
+                        <li><a href="/">Art</a></li>
+                        <li><a href="/projects/projects.html">Projects</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <section class="explore-container">
+                <article class="explore-container__content">
+                    <h1>Explore my <span class="art-highlight">art</span></h1>
+                    <div class="explore-container__content__description">
+                        <p>I've recently became interested in CSS art. Below are a few that I've created so far.
+                            Creating these has greatly improved my knowledge of CSS!</p>
+                        <div class="explore-container__content__btn">
+                            <a href="#art"><button>View Art</button></a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </header>
+
+        <section id="art">
+            <article class="art-heading">
+                <div class="line"></div>
+                <h2>CSS Art</h2>
+            </article>
+        </section>
+
+        <section id="css-art">
+            <div id="cactus">
+                <div id="cactus-img" class="slide from-left">
+                    <img src="./imgs/cactus.png" alt="cactus-art">
+                </div>
+
+                <div id="cactus-description" class="slide right description">
+                    <h3>CSS Cactus</h3>
+                    <p>Here I made a cactus image using CSS and SASS. This was done through
+                        a tutorial walkthrough so I could get a feel of how CSS artists format their
+                        procedures and design processes.
+                    </p>
+                    <div class="description__btn__container">
+                        <!--add anchor tag for code-->
+                        <a href="https://nyrellcl.github.io/CSSCactus/" target="_blank"><button
+                                aria-label="Vew Live Site" type="button" class="live-site"><i
+                                    class="fa-solid fas fa-link"></i></button></a>
+                        <a href="https://github.com/nyrellcl/CSSCactus" target="_blank"><button aria-label="View Code"
+                                type="button" class="code"><i class="fa-solid fa-code"></i></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="boba">
+                <div id="boba-img" class="slide right">
+                    <img src="./imgs/boba.png" alt="boba-art">
+                </div>
+
+                <div id="boba-description" class=" slide from-left description">
+                    <h3>CSS Boba</h3>
+                    <p>Here I made a boba image as requested by a friend of mine. Using CSS and SASS.
+                    </p>
+                    <p> This was done through my own facilitation. I wanted to create my own CSS art right away. Luckily
+                        a friend
+                        of mine suggested I make a boba art. And so I did!</p>
+                    <div class="description__btn__container">
+                        <!--add anchor tag for code-->
+                        <a href="https://nyrellcl.github.io/CSSBoba/" target="_blank"><button aria-label="Vew Live Site"
+                                type="button" class="live-site"><i class="fa-solid fas fa-link"></i></button></a>
+                        <a href="https://github.com/nyrellcl/CSSBoba" target="_blank"><button aria-label="View Code"
+                                type="button" class="code"><i class="fa-solid fa-code"></i></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="spaceship">
+                <div id="spaceship-img" class="slide from-left">
+                    <img src="./imgs/UFO.png" alt="UFO-art">
+                </div>
+                <div id="spaceship-description" class="slide right description">
+                    <h3>CSS UFO</h3>
+                    <p>CSS UFO made using CSS and SASS. This also includes a bit of animation where the
+                        UFO is gliding and eventually disappears.
+                    </p>
+                    <p>This was the second walkthrough I did. This took longer to make which was good practice when it
+                        came to learning the design processes of different
+                        CSS art projects. Afterwards, I created the Boba art image.
+                    </p>
+                    <div class="description__btn__container">
+                        <!--add anchor tag for code-->
+                        <a href="https://nyrellcl.github.io/CSS-Spaceship/" target="_blank"><button
+                                aria-label="Vew Live Site" type="button" class="live-site"><i
+                                    class="fa-solid fas fa-link"></i></button></a>
+                        <a href="https://github.com/nyrellcl/CSS-Spaceship"><button aria-label="View Code" type="button"
+                                class="code"><i class="fa-solid fa-code"></i></button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-container">
+        <nav class="footer-bar">
+            <div class="attribution">
+                <p>Design & code by Nyrell Leonor &copy; 2022</p>
+            </div>
+            <ul class="footer-bar__list">
+                <a href="https://www.nyrellcl.com/">
+                    <li>Home</li>
+                </a>
+                <a href="/">
+                    <li>About</li>
+                </a>
+                <a href="/CSSArt/art.html">
+                    <li>Art</li>
+                </a>
+                <a href="/projects/projects.html">
+                    <li>Projects</li>
+                </a>
+            </ul>
+            <a href="/imgs/Nyrell Leonor Resume-CV.pdf" download alt="Nyrell Leonor Resume"><button id="resume"
+                    class="resume-btn">View My Resume</button></a>
+        </nav>
+
+    </footer>
+
+</body>
+
+</html>

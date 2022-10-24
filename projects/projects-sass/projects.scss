@@ -1,0 +1,514 @@
+@import "./base/base";
+
+@import "./colors/colors";
+
+@import "./fonts/fonts";
+
+@import "./mixin/mixin";
+
+#ham-icon {
+    margin: auto 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 2rem;
+    justify-content: flex-start;
+}
+
+//sets colors of the bars
+#ham-icon div {
+    width: 30px;
+    height: 4px;
+    background-color: $body;
+    margin: 3px 0;
+    transition: 0.4s;
+    z-index: 5;
+}
+
+//mobile menu
+
+.ham-container {
+    display: none;
+    width: 100%;
+}
+
+/*will rotate counterclockwise once user presses the icon which will form an X along with bar2*/
+.open {
+
+    .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+        transform: rotate(-45deg) translate(-6px, 6px);
+    }
+
+    .bar2 {
+        opacity: 0;
+    }
+
+    .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        /*stacks each link on top of each other on mobile*/
+        justify-content: center;
+        z-index: 3;
+        height: 100vh;
+        margin-left: auto;
+        top: 0;
+        width: 80%;
+        right: 0;
+        box-shadow: -1px 9px 90px 180px #2d324d59;
+        list-style: none;
+        font-family: $alata, $sans;
+        transition: top 0.5s ease-in-out;
+        opacity: 0.98;
+
+        li {
+            padding: 0.5rem;
+        }
+    }
+}
+
+
+/*once user opens the icon the links will display in a stacked view*/
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    /*fixed height of header*/
+    left: 0;
+    top: 100%;
+    height: calc(70vh - 50px);
+    /*takes the full remaining space of site hence width 100. set the height to 100 and subtract it from the height of header*/
+    width: 100%;
+    font-size: 3.5rem;
+    /*sets the background of the menu once user opens the icon. I want to make this transition more seamless. (future update)*/
+    background-color: $deep-blue;
+    text-align: right;
+
+    a {
+        color: $body;
+
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    .desktop-nav-bar {
+        display: none;
+    }
+
+    .ham-container {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 3rem;
+    }
+
+    .header-bg {
+        background-color: $intro-bg;
+        height: 100vh;
+        font-family: $alata, $sans;
+
+        .project-intro-container {
+            height: 90%;
+
+            &__contents {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: inherit;
+                gap: 4rem;
+
+                h1 {
+                    font-size: 74px;
+                    color: $light-grey;
+                    padding: 0 2rem;
+                }
+
+                .highlight {
+                    color: $body;
+                }
+
+                p {
+                    color: $light-grey;
+                    text-align: center;
+                    width: 80%;
+                    margin: 0 auto;
+                    font-size: 1.125rem;
+                }
+
+                &__btn {
+                    margin: 0 auto;
+
+                    button {
+                        width: 220px;
+                        height: 48px;
+                        border: none;
+                        background-color: $body;
+                        color: $deep-blue;
+                        font-family: $alata, $sans;
+                        font-size: 1.125rem;
+                        border-radius: 10px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .project-heading {
+        font-family: $alata, $sans;
+        margin: 4rem auto;
+        padding: 0 2rem;
+
+        h2 {
+            font-size: 64px;
+        }
+
+        .line {
+            width: 44px;
+            height: 8px;
+            background: $intro-bg;
+        }
+    }
+
+    .projects-gallery {
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        align-content: center;
+        justify-content: center;
+        gap: 10rem;
+        margin-bottom: 10rem;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: $alata, $sans;
+        width: 90%;
+        margin: 0 auto;
+
+        &__details {
+            display: none;
+        }
+
+        &-img {
+            img {
+                border-top-right-radius: 1.125rem;
+                border-top-left-radius: 1.125rem;
+                width: 100%;
+                box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+            }
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+            position: relative;
+            top: -5px;
+            background-color: $intro-bg;
+            color: $body;
+            border-bottom-right-radius: 1.125rem;
+            border-bottom-left-radius: 1.125rem;
+            padding: 1rem;
+            box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+
+            h3 {
+                text-align: center;
+                font-size: 2rem;
+            }
+
+            .view-proj {
+                color: $body;
+                padding-bottom: 0.5rem;
+                border-bottom: 2px solid $body;
+            }
+
+        }
+
+        &__desktop {
+            display: none;
+        }
+    }
+
+    .footer-container {
+        height: 40vh;
+        background-color: $deep-blue;
+
+        .footer-bar {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 1.5rem;
+            height: inherit;
+            justify-content: space-evenly;
+
+            &__list {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                font-family: $mont, $sans;
+                gap: 0.75rem;
+                font-size: 1.125rem;
+
+                a {
+                    color: $body;
+                }
+            }
+
+            .resume-btn {
+                width: 200px;
+                height: 50px;
+                font-family: $mont, $sans;
+                background-color: $body;
+                border: none;
+                font-size: 1rem;
+                border-radius: 10px;
+            }
+
+            .attribution {
+                font-family: $mont, $sans;
+                color: $body;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .ham-container {
+        display: none;
+    }
+
+    .header-bg {
+        .desktop-nav-bar {
+            display: flex;
+            height: 10vh;
+            align-items: center;
+            margin-right: 1rem;
+
+            &__list {
+                display: flex;
+                align-items: center;
+                width: 40%;
+                margin-left: auto;
+                justify-content: space-between;
+                font-family: $mont, $sans;
+                font-size: 1.125rem;
+
+                a {
+                    color: $body;
+                }
+            }
+        }
+
+        .project-intro-container {
+            &__contents {
+                h1 {
+                    text-align: center;
+                }
+
+                p {
+                    font-size: 1.75rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .header-bg {
+        .desktop-nav-bar {
+            width: 100%;
+            background-color: $intro-bg;
+            z-index: 10;
+            position: fixed;
+
+            &__list {
+                padding-right: 1rem;
+
+                a {
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                    }
+
+                    &::before,
+                    *::after {
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        background-color: currentColor;
+                        top: 100%;
+                        left: 0
+                    }
+
+                    &::before {
+                        transform-origin: 100% 50%;
+                        transform: scale3d(0, 1, 1);
+                        transition: transform 0.3s;
+                    }
+
+                    &:hover::before {
+                        transform-origin: 0% 50%;
+                        transform: scale3d(1, 1, 1);
+                    }
+                }
+            }
+        }
+
+        .project-intro-container{
+            height: 100%;
+            &__contents{
+                h1{
+                    font-size: 100px;
+                }
+                p{
+                    width: 65%;
+                }
+                &__btn{
+                    button{
+                        transition: all 350ms ease-in-out;
+                        &:hover, &:focus{
+                            cursor: pointer;
+                            transform: scale(1.1);
+                        }
+                        &:active{
+                            transform: translateY(5px);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .projects-gallery{
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-template-rows: repeat(4, 200px);
+        gap: 2rem;
+        margin-bottom: 0;
+    }
+
+    .card-wrapper{
+        height: 100%;
+    }
+
+    .card{
+        position: relative;
+        &-img{
+            img{
+                border-radius: 1.125rem;
+                
+            }
+        }
+        &__content{
+            display: none;
+        }
+        &__details{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            font-family: $alata, $sans;
+            align-items: center;
+            background-color: $body;
+            backdrop-filter: blur(2px) brightness(1.3);
+            opacity: 0;
+            transition: opacity 350ms;
+            &:hover{
+                opacity: 1;
+            }
+            &__btn{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 1rem;
+                .project,.code{
+                    width: 120px;
+                    height: 46px;
+                    font-family: $alata, $sans;
+                    border: none;
+                    border-radius: 10px;
+                    font-size: 1rem;
+                    transition: all 350ms ease-in-out;
+                    &:hover, &:focus{
+                        cursor: pointer;
+                        transform: scale(1.1);
+                    }
+                    &:active{
+                        transform: translateY(5px);
+                    }
+                }
+                .project{
+                    background-color: $intro-bg;
+                    color: $body;
+                }
+                .code{
+                    background-color: $light-grey;
+                }
+            }
+        }
+    }
+
+    .footer-container {
+        height: 20vh;
+
+        .footer-bar {
+            flex-direction: row;
+            .resume-btn{
+                transition: all 350ms ease-in-out;
+                &:hover{
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
+                &:active{
+                    transform: translateY(10px);
+                }
+            }
+            &__list {
+                flex-direction: row;
+                gap: 2rem;
+                a{
+                    position: relative;
+                    &::before{
+                        content: '';
+                    }
+                    &::before, *::after{
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        background-color: currentColor;
+                        top: 100%;
+                        left: 0
+                    }
+                    &::before{
+                        transform-origin: 100% 50%;
+                        transform: scale3d(0,1,1);
+                        transition: transform 0.3s;
+                    }
+                    &:hover::before{
+                        transform-origin: 0% 50%;
+                        transform: scale3d(1,1,1);
+                    }
+                }
+            }
+        }
+    }
+}
