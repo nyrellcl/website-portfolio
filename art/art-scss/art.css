@@ -375,6 +375,7 @@ ul {
     background: #fff;
     z-index: 10;
     position: fixed;
+    opacity: 0.98;
   }
   .desktop-nav-bar__list {
     padding-right: 1rem;
