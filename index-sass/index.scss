@@ -589,11 +589,11 @@ body {
 
         .footer-bar {
             flex-direction: row;
+            a{
+                color: $deep-blue;
+            }
             .resume-btn{
                 transition: all 350ms ease-in-out;
-                a{
-                    color: $deep-blue;
-                }
                 &:hover{
                     cursor: pointer;
                     transform: scale(1.1);
