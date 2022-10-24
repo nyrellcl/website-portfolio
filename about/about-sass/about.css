@@ -245,6 +245,7 @@ ul {
   .footer-container .footer-bar .attribution {
     font-family: "Montserrat", sans-serif;
     color: #efefef;
+    font-size: 12px;
   }
 }
 @media only screen and (min-width: 768px) {
