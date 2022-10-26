@@ -219,9 +219,6 @@ ul {
     justify-content: space-evenly;
     padding: 2rem 0;
   }
-  .footer-container .footer-bar a {
-    color: #161d22;
-  }
   .footer-container .footer-bar__list {
     display: flex;
     flex-direction: column;
@@ -243,6 +240,7 @@ ul {
     border: none;
     font-size: 1rem;
     border-radius: 10px;
+    color: #161d22;
   }
   .footer-container .footer-bar .attribution {
     font-family: "Montserrat", sans-serif;

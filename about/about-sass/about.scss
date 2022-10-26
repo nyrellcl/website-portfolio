@@ -250,9 +250,6 @@
             height: inherit;
             justify-content: space-evenly;
             padding: 2rem 0;
-            a{
-                color: $deep-blue;
-            }
             &__list {
                 display: flex;
                 flex-direction: column;
@@ -275,6 +272,7 @@
                 border: none;
                 font-size: 1rem;
                 border-radius: 10px;
+                color: $deep-blue;
             }
 
             .attribution {
