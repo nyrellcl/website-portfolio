@@ -51,6 +51,7 @@ body {
 .swiper {
   width: 90%;
   height: auto;
+  padding-bottom: 2rem;
 }
 
 .swiper-pagination {
