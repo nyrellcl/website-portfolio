@@ -233,6 +233,7 @@ ul {
     font-family: "Montserrat", sans-serif;
     gap: 0.75rem;
     font-size: 1.125rem;
+    height: 25vh;
   }
   .footer-container .footer-bar__list a {
     color: #efefef;
@@ -420,6 +421,7 @@ ul {
   .footer-container .footer-bar__list {
     flex-direction: row;
     gap: 2rem;
+    height: auto;
   }
   .footer-container .footer-bar__list a {
     position: relative;
