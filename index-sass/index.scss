@@ -350,6 +350,7 @@ body {
                 font-family: $mont, $sans;
                 gap: 0.75rem;
                 font-size: 1.125rem;
+                height: 25vh;
 
                 a {
                     color: $body;
@@ -692,6 +693,7 @@ body {
             &__list {
                 flex-direction: row;
                 gap: 2rem;
+                height: auto;
 
                 a {
                     position: relative;
