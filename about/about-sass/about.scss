@@ -131,18 +131,17 @@
 
     .header-bg {
         .about-container {
-            display: flex;
+            @include align-flex;
             height: 100vh;
             width: 100%;
             flex-direction: column;
-            align-items: center;
             justify-content: space-evenly;
             position: relative;
 
             &__title {
                 span {
                     font-family: $jose, $sans;
-                    font-size: 72px;
+                    font-size: rem(72);
                     position: absolute;
 
                     &:first-child {
@@ -190,7 +189,7 @@
             font-family: $alata, $sans;
 
             h1 {
-                font-size: 74px;
+                font-size: rem(74);
                 padding: 1rem;
                 text-align: center;
             }
@@ -200,8 +199,8 @@
             }
 
             .line {
-                width: 200px;
-                height: 3px;
+                width: rem(200);
+                height: rem(3);
                 background-color: $body;
                 margin: 0 auto;
             }
@@ -220,17 +219,15 @@
                 }
 
                 &__list {
-                    display: grid;
+                    @include align-flex;
                     grid-template-columns: repeat(3, auto);
-                    align-items: center;
                     justify-content: center;
                     grid-template-rows: repeat(2, 2fr);
                     gap: 2rem;
 
                     li {
-                        display: flex;
+                        @include align-flex;
                         flex-direction: column;
-                        align-items: center;
                         gap: 1rem;
                     }
                 }
@@ -243,17 +240,15 @@
         background-color: $deep-blue;
 
         .footer-bar {
-            display: flex;
+            @include align-flex;
             flex-direction: column-reverse;
-            align-items: center;
             gap: 1.5rem;
             height: inherit;
             justify-content: space-evenly;
             padding: 2rem 0;
             &__list {
-                display: flex;
+                @include align-flex;
                 flex-direction: column;
-                align-items: center;
                 justify-content: space-evenly;
                 font-family: $mont, $sans;
                 gap: 0.75rem;
@@ -265,20 +260,20 @@
             }
 
             .resume-btn {
-                width: 200px;
-                height: 50px;
+                width: rem(200);
+                height: rem(50);
                 font-family: $mont, $sans;
                 background-color: $body;
                 border: none;
                 font-size: 1rem;
-                border-radius: 10px;
+                border-radius: rem(10);
                 color: $deep-blue;
             }
 
             .attribution {
                 font-family: $mont, $sans;
                 color: $body;
-                font-size: 12px;
+                font-size: rem(12);
             }
         }
     }
@@ -291,14 +286,12 @@
 
     .header-bg {
         .desktop-nav-bar {
-            display: flex;
+            @include align-flex;
             height: 10vh;
-            align-items: center;
             margin-right: 1rem;
 
             &__list {
-                display: flex;
-                align-items: center;
+                @include align-flex;
                 width: 40%;
                 margin-left: auto;
                 justify-content: space-between;
@@ -370,7 +363,7 @@
                         height: 2px;
                         background-color: currentColor;
                         top: 100%;
-                        left: 0
+                        left: 0;
                     }
 
                     &::before {
@@ -390,7 +383,7 @@
         .about-container {
             &__title {
                 span {
-                    font-size: 100px;
+                    font-size: rem(100);
 
                     &:first-child {
                         top: 10%;
@@ -446,12 +439,11 @@
 
             &__content {
                 height: 50vh;
-                display: flex;
-                align-items: center;
+                @include align-flex;
                 flex-direction: column;
                 justify-content: space-evenly;
                 p{
-                    font-size: 24px;
+                    font-size: rem(24);
                 }
             }
         }

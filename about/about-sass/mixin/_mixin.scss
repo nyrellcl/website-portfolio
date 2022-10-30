@@ -1,5 +1,23 @@
+@use "sass:math";
+
 @mixin hover{
     &:not([disabled]):hover{
         @content;
     }
+}
+
+@mixin align-flex(){
+    display: flex;
+    align-items: center;
+}
+
+
+@function rem($number){
+    @if unitless($number){
+        $default-one-rem-in-pixel: 16;
+
+        @return math.div($number, $default-one-rem-in-pixel) * 1rem;
+    }
+
+    @error "This '#{number}' must not have a unit"
 }

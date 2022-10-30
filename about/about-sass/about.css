@@ -122,16 +122,16 @@ ul {
   }
   .header-bg .about-container {
     display: flex;
+    align-items: center;
     height: 100vh;
     width: 100%;
     flex-direction: column;
-    align-items: center;
     justify-content: space-evenly;
     position: relative;
   }
   .header-bg .about-container__title span {
     font-family: "Josefin Sans", sans-serif;
-    font-size: 72px;
+    font-size: 4.5rem;
     position: absolute;
   }
   .header-bg .about-container__title span:first-child {
@@ -168,7 +168,7 @@ ul {
     font-family: "Alata", sans-serif;
   }
   .intro-wrapper__container h1 {
-    font-size: 74px;
+    font-size: 4.625rem;
     padding: 1rem;
     text-align: center;
   }
@@ -176,8 +176,8 @@ ul {
     line-height: 1.75rem;
   }
   .intro-wrapper__container .line {
-    width: 200px;
-    height: 3px;
+    width: 12.5rem;
+    height: 0.1875rem;
     background-color: #efefef;
     margin: 0 auto;
   }
@@ -193,17 +193,17 @@ ul {
     margin: 4rem auto 2rem auto;
   }
   .intro-wrapper__container__skills__list {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
+    display: flex;
     align-items: center;
+    grid-template-columns: repeat(3, auto);
     justify-content: center;
     grid-template-rows: repeat(2, 2fr);
     gap: 2rem;
   }
   .intro-wrapper__container__skills__list li {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     gap: 1rem;
   }
   .footer-container {
@@ -212,8 +212,8 @@ ul {
   }
   .footer-container .footer-bar {
     display: flex;
-    flex-direction: column-reverse;
     align-items: center;
+    flex-direction: column-reverse;
     gap: 1.5rem;
     height: inherit;
     justify-content: space-evenly;
@@ -221,8 +221,8 @@ ul {
   }
   .footer-container .footer-bar__list {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     justify-content: space-evenly;
     font-family: "Montserrat", sans-serif;
     gap: 0.75rem;
@@ -233,19 +233,19 @@ ul {
     color: #efefef;
   }
   .footer-container .footer-bar .resume-btn {
-    width: 200px;
-    height: 50px;
+    width: 12.5rem;
+    height: 3.125rem;
     font-family: "Montserrat", sans-serif;
     background-color: #efefef;
     border: none;
     font-size: 1rem;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     color: #161d22;
   }
   .footer-container .footer-bar .attribution {
     font-family: "Montserrat", sans-serif;
     color: #efefef;
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -254,8 +254,8 @@ ul {
   }
   .header-bg .desktop-nav-bar {
     display: flex;
-    height: 10vh;
     align-items: center;
+    height: 10vh;
     margin-right: 1rem;
   }
   .header-bg .desktop-nav-bar__list {
@@ -323,7 +323,7 @@ ul {
     transform: scale3d(1, 1, 1);
   }
   .header-bg .about-container__title span {
-    font-size: 100px;
+    font-size: 6.25rem;
   }
   .header-bg .about-container__title span:first-child {
     top: 10%;
@@ -368,7 +368,7 @@ ul {
     justify-content: space-evenly;
   }
   .intro-wrapper__container__content p {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   .footer-container {
     height: 20vh;
