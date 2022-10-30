@@ -192,15 +192,38 @@ ul {
     font-size: 3rem;
     margin: 4rem auto 2rem auto;
   }
-  .intro-wrapper__container__skills__list {
+  .intro-wrapper__container__skills__grid {
     display: grid;
     align-content: center;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: auto;
     justify-content: center;
-    grid-template-rows: repeat(2, 2fr);
+    grid-template-rows: auto;
+    gap: 3rem;
+  }
+  .intro-wrapper__container__skills__grid__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     gap: 2rem;
   }
-  .intro-wrapper__container__skills__list li {
+  .intro-wrapper__container__skills__grid__card img {
+    width: 3.375rem;
+    height: 4rem;
+  }
+  .intro-wrapper__container__skills__grid__card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .intro-wrapper__container__skills__grid__card__content h3 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  .intro-wrapper__container__skills__grid__card__content p {
+    opacity: 0.8;
+    margin: 0;
+  }
+  .intro-wrapper__container__skills__grid li {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -281,9 +304,11 @@ ul {
     width: 70%;
     margin: 4rem 0;
   }
-  .intro-wrapper__container__skills__list {
+  .intro-wrapper__container__skills__grid {
     align-content: center;
-    grid-template-columns: repeat(3, 1fr);
+  }
+  .intro-wrapper__container__skills__grid__card h3, .intro-wrapper__container__skills__grid__card p {
+    margin: 0;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -356,12 +381,13 @@ ul {
     top: 71%;
   }
   .intro-wrapper__container p {
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
     line-height: normal;
   }
-  .intro-wrapper__container__skills__list {
-    text-align: center;
+  .intro-wrapper__container__skills__grid {
+    text-align: left;
+    grid-template-columns: repeat(3, 1fr);
   }
   .intro-wrapper__container__content {
     height: 50vh;
