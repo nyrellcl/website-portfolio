@@ -214,7 +214,7 @@ ul {
     display: none;
   }
   .footer-container {
-    height: 40vh;
+    height: auto;
     background-color: #161d22;
     padding: 2rem 0;
   }
@@ -225,6 +225,9 @@ ul {
     gap: 1.5rem;
     height: inherit;
     justify-content: space-evenly;
+  }
+  .footer-container .footer-bar a {
+    color: #161d22;
   }
   .footer-container .footer-bar__list {
     display: flex;
@@ -252,7 +255,7 @@ ul {
   .footer-container .footer-bar .attribution {
     font-family: "Montserrat", sans-serif;
     color: #efefef;
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 @media only screen and (min-width: 768px) {
