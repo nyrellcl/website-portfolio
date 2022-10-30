@@ -145,7 +145,7 @@ ul {
     color: #161d22;
     font-family: "Alata", sans-serif;
     font-size: 1.125rem;
-    border-radius: 10px;
+    border-radius: 0.625rem;
   }
   .project-heading {
     font-family: "Alata", sans-serif;
@@ -170,9 +170,9 @@ ul {
   }
   .card {
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     font-family: "Alata", sans-serif;
     width: 90%;
     margin: 0 auto;
@@ -188,8 +188,8 @@ ul {
   }
   .card__content {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     gap: 1rem;
     width: 100%;
     position: relative;
@@ -219,8 +219,8 @@ ul {
   }
   .footer-container .footer-bar {
     display: flex;
-    flex-direction: column-reverse;
     align-items: center;
+    flex-direction: column-reverse;
     gap: 1.5rem;
     height: inherit;
     justify-content: space-evenly;
@@ -228,8 +228,8 @@ ul {
   }
   .footer-container .footer-bar__list {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     justify-content: space-evenly;
     font-family: "Montserrat", sans-serif;
     gap: 0.75rem;
@@ -261,8 +261,8 @@ ul {
   }
   .header-bg .desktop-nav-bar {
     display: flex;
-    height: 10vh;
     align-items: center;
+    height: 10vh;
     margin-right: 1rem;
   }
   .header-bg .desktop-nav-bar__list {
@@ -323,7 +323,7 @@ ul {
     height: 100%;
   }
   .header-bg .project-intro-container__contents h1 {
-    font-size: 100px;
+    font-size: 6.25rem;
   }
   .header-bg .project-intro-container__contents p {
     width: 65%;
@@ -363,9 +363,9 @@ ul {
     width: 100%;
     height: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-evenly;
     font-family: "Alata", sans-serif;
-    align-items: center;
     background-color: #efefef;
     -webkit-backdrop-filter: blur(2px) brightness(1.3);
             backdrop-filter: blur(2px) brightness(1.3);
