@@ -250,7 +250,7 @@ ul {
     color: #161d22;
   }
   .footer-container {
-    height: 40vh;
+    height: auto;
     background-color: #161d22;
     padding: 2rem 0;
   }
