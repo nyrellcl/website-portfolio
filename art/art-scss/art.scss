@@ -281,6 +281,7 @@
     .footer-container {
         height: 40vh;
         background-color: $deep-blue;
+        padding: 2rem 0;
 
         .footer-bar {
             @include align-flex;
@@ -288,7 +289,6 @@
             gap: 1.5rem;
             height: inherit;
             justify-content: space-evenly;
-            padding: 2rem 0;
             a{
                 color: $deep-blue;
             }
