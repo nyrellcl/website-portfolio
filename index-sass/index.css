@@ -206,9 +206,9 @@ body {
   }
   .card {
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     font-family: "Alata", sans-serif;
   }
   .card-img img {
@@ -217,8 +217,8 @@ body {
   }
   .card__content {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     gap: 1rem;
     width: 100%;
     position: relative;
@@ -262,8 +262,8 @@ body {
   }
   .connect-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     justify-content: space-evenly;
     background-color: #1d3d59;
     font-family: "Alata", sans-serif;
@@ -290,8 +290,8 @@ body {
   }
   .footer-container .footer-bar {
     display: flex;
-    flex-direction: column-reverse;
     align-items: center;
+    flex-direction: column-reverse;
     gap: 1.5rem;
     height: inherit;
     justify-content: space-evenly;
@@ -301,8 +301,8 @@ body {
   }
   .footer-container .footer-bar__list {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     justify-content: space-evenly;
     font-family: "Montserrat", sans-serif;
     gap: 0.75rem;
@@ -334,8 +334,8 @@ body {
   }
   .header-bg .desktop-nav-bar {
     display: flex;
-    height: 10vh;
     align-items: center;
+    height: 10vh;
     margin-right: 1rem;
   }
   .header-bg .desktop-nav-bar__list {
@@ -476,8 +476,8 @@ body {
   }
   .card__desktop__content {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
   }
   .card__desktop__content h3 {
     font-size: 3rem;
@@ -497,8 +497,8 @@ body {
   }
   .card__desktop__btn {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     gap: 1.5rem;
   }
   .card__desktop__btn__project, .card__desktop__btn__code {

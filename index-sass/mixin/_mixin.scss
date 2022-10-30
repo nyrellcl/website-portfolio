@@ -3,3 +3,8 @@
         @content;
     }
 }
+
+@mixin align-flex(){
+    display: flex;
+    align-items: center;
+}

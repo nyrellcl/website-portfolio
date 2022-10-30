@@ -192,8 +192,7 @@ body {
     }
 
     .work-statement-container {
-        display: flex;
-        align-items: center;
+       @include align-flex;
         font-family: $alata, $sans;
         text-align: center;
         line-height: 1.75rem;
@@ -229,10 +228,9 @@ body {
     }
 
     .card {
-        display: flex;
+        @include align-flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         font-family: $alata, $sans;
 
         &-img {
@@ -244,9 +242,8 @@ body {
         }
 
         &__content {
-            display: flex;
+            @include align-flex;
             flex-direction: column;
-            align-items: center;
             gap: 1rem;
             width: 100%;
             position: relative;
@@ -299,9 +296,8 @@ body {
     }
 
     .connect-container {
-        display: flex;
+        @include align-flex;
         flex-direction: column;
-        align-items: center;
         justify-content: space-evenly;
         background-color: $intro-bg;
         font-family: $alata, $sans;
@@ -313,8 +309,7 @@ body {
         }
 
         &__list {
-            display: flex;
-            align-items: center;
+            @include align-flex;
             justify-content: space-evenly;
             width: 100%;
 
@@ -331,9 +326,8 @@ body {
         padding: 2rem 0;
 
         .footer-bar {
-            display: flex;
+            @include align-flex;
             flex-direction: column-reverse;
-            align-items: center;
             gap: 1.5rem;
             height: inherit;
             justify-content: space-evenly;
@@ -343,9 +337,8 @@ body {
             }
 
             &__list {
-                display: flex;
+                @include align-flex;
                 flex-direction: column;
-                align-items: center;
                 justify-content: space-evenly;
                 font-family: $mont, $sans;
                 gap: 0.75rem;
@@ -384,14 +377,12 @@ body {
 
     .header-bg {
         .desktop-nav-bar {
-            display: flex;
+            @include align-flex;
             height: 10vh;
-            align-items: center;
             margin-right: 1rem;
 
             &__list {
-                display: flex;
-                align-items: center;
+                @include align-flex;
                 width: 40%;
                 margin-left: auto;
                 justify-content: space-between;
@@ -570,9 +561,9 @@ body {
             }
 
             &__content {
-                display: flex;
+                @include align-flex;
                 flex-direction: column;
-                align-items: center;
+                
 
                 h3 {
                     font-size: 3rem;
@@ -580,8 +571,7 @@ body {
 
                 .tech-stack {
                     font-size: 12px;
-                    display: flex;
-                    align-items: center;
+                    @include align-flex;
                     gap: 1rem;
                     margin-top: 1rem;
 
@@ -595,9 +585,8 @@ body {
             }
 
             &__btn {
-                display: flex;
+                @include align-flex;
                 flex-direction: column;
-                align-items: center;
                 gap: 1.5rem;
 
                 &__project,
