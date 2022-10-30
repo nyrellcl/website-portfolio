@@ -140,8 +140,8 @@ ul {
     margin: 10rem auto;
   }
   img {
-    width: 300px;
-    height: 300px;
+    width: 18.75rem;
+    height: 18.75rem;
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 50%;
@@ -205,7 +205,7 @@ ul {
     margin: 0 auto;
   }
   .art-heading h2 {
-    font-size: 64px;
+    font-size: 4rem;
   }
   .art-heading .line {
     width: 44px;
@@ -214,8 +214,8 @@ ul {
   }
   .description {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     gap: 2rem;
     width: 100%;
@@ -255,8 +255,8 @@ ul {
   }
   .footer-container .footer-bar {
     display: flex;
-    flex-direction: column-reverse;
     align-items: center;
+    flex-direction: column-reverse;
     gap: 1.5rem;
     height: inherit;
     justify-content: space-evenly;
@@ -267,8 +267,8 @@ ul {
   }
   .footer-container .footer-bar__list {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     justify-content: space-evenly;
     font-family: "Montserrat", sans-serif;
     gap: 0.75rem;
@@ -291,7 +291,7 @@ ul {
   .footer-container .footer-bar .attribution {
     font-family: "Montserrat", sans-serif;
     color: #efefef;
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -301,16 +301,16 @@ ul {
     margin: 6rem auto;
   }
   img {
-    width: 320px;
-    height: 320px;
+    width: 20rem;
+    height: 20rem;
   }
   .ham-container {
     display: none;
   }
   .desktop-nav-bar {
     display: flex;
-    height: 10vh;
     align-items: center;
+    height: 10vh;
     margin-right: 1rem;
   }
   .desktop-nav-bar__list {
@@ -370,8 +370,8 @@ ul {
     justify-content: space-between;
   }
   img {
-    width: 500px;
-    height: 500px;
+    width: 31.25rem;
+    height: 31.25rem;
     margin: 0 2rem;
   }
   .desktop-nav-bar {
@@ -414,7 +414,7 @@ ul {
     align-items: center;
   }
   .explore-container__content h1 {
-    font-size: 100px;
+    font-size: 6.25rem;
     z-index: 10;
   }
   .explore-container__content__description {
