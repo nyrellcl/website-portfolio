@@ -471,6 +471,11 @@
                 &__grid {
                     text-align: left;
                     grid-template-columns: repeat(3, 1fr);
+                    &__card{
+                        p{
+                            margin: 0;
+                        }
+                    }
                 }
             }
 

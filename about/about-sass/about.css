@@ -389,6 +389,9 @@ ul {
     text-align: left;
     grid-template-columns: repeat(3, 1fr);
   }
+  .intro-wrapper__container__skills__grid__card p {
+    margin: 0;
+  }
   .intro-wrapper__container__content {
     height: 50vh;
     display: flex;
