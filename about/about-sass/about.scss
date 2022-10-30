@@ -219,7 +219,8 @@
                 }
 
                 &__list {
-                    @include align-flex;
+                    display: grid;
+                    align-content: center;
                     grid-template-columns: repeat(3, auto);
                     justify-content: center;
                     grid-template-rows: repeat(2, 2fr);

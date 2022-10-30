@@ -193,8 +193,8 @@ ul {
     margin: 4rem auto 2rem auto;
   }
   .intro-wrapper__container__skills__list {
-    display: flex;
-    align-items: center;
+    display: grid;
+    align-content: center;
     grid-template-columns: repeat(3, auto);
     justify-content: center;
     grid-template-rows: repeat(2, 2fr);
