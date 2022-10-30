@@ -19,8 +19,8 @@
 
 //sets colors of the bars
 #ham-icon div {
-    width: 30px;
-    height: 4px;
+    width: rem(30);
+    height: rem(4);
     background-color: $body;
     margin: 3px 0;
     transition: 0.4s;
@@ -46,7 +46,7 @@ body {
 }
 
 .swiper-pagination {
-    bottom: -20px;
+    bottom: rem(-20);
 }
 
 .swiper-pagination-bullet-active {
@@ -55,7 +55,7 @@ body {
 
 .swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 5px;
+    bottom: rem(5);
 }
 
 
@@ -109,7 +109,7 @@ body {
 .mobile-menu {
     display: none;
     position: absolute;
-    top: 50px;
+    top: rem(50);
     /*fixed height of header*/
     left: 0;
     top: 100%;
@@ -127,7 +127,7 @@ body {
     }
 
     li {
-        margin-bottom: 10px;
+        margin-bottom: rem(10);
     }
 }
 
@@ -204,8 +204,8 @@ body {
         &__content {
             .line {
                 display: block;
-                width: 80px;
-                height: 5px;
+                width: rem(80);
+                height: rem(5);
                 background-color: $deep-blue;
                 margin: 0 auto 2rem;
 
@@ -215,7 +215,7 @@ body {
 
     .projects-heading {
         font-family: $alata, $sans;
-        font-size: 36px;
+        font-size: rem(36);
         padding-left: 1rem;
 
         h2 {
@@ -305,7 +305,7 @@ body {
         height: 35vh;
 
         h4 {
-            font-size: 32px;
+            font-size: rem(32);
         }
 
         &__list {
@@ -364,7 +364,7 @@ body {
             .attribution {
                 font-family: $mont, $sans;
                 color: $body;
-                font-size: 12px;
+                font-size: rem(12);
             }
         }
     }
@@ -506,7 +506,7 @@ body {
                 margin-left: 3rem;
 
                 h1 {
-                    font-size: 100px;
+                    font-size: rem(100);
                     width: 100%;
                 }
 
