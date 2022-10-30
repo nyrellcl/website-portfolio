@@ -207,7 +207,7 @@ ul {
     gap: 1rem;
   }
   .footer-container {
-    height: 40vh;
+    height: auto;
     background-color: #161d22;
     padding: 2rem 0;
   }
@@ -218,6 +218,9 @@ ul {
     gap: 1.5rem;
     height: inherit;
     justify-content: space-evenly;
+  }
+  .footer-container .footer-bar a {
+    color: #161d22;
   }
   .footer-container .footer-bar__list {
     display: flex;
@@ -233,13 +236,13 @@ ul {
     color: #efefef;
   }
   .footer-container .footer-bar .resume-btn {
-    width: 12.5rem;
-    height: 3.125rem;
+    width: 200px;
+    height: 50px;
     font-family: "Montserrat", sans-serif;
     background-color: #efefef;
     border: none;
     font-size: 1rem;
-    border-radius: 0.625rem;
+    border-radius: 10px;
     color: #161d22;
   }
   .footer-container .footer-bar .attribution {

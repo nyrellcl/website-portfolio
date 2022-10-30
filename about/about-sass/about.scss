@@ -237,7 +237,7 @@
     }
 
     .footer-container {
-        height: 40vh;
+        height: auto;
         background-color: $deep-blue;
         padding: 2rem 0;
 
@@ -247,6 +247,11 @@
             gap: 1.5rem;
             height: inherit;
             justify-content: space-evenly;
+
+            a {
+                color: $deep-blue;
+            }
+
             &__list {
                 @include align-flex;
                 flex-direction: column;
@@ -255,19 +260,20 @@
                 gap: 0.75rem;
                 font-size: 1.125rem;
                 height: 25vh;
+
                 a {
                     color: $body;
                 }
             }
 
             .resume-btn {
-                width: rem(200);
-                height: rem(50);
+                width: 200px;
+                height: 50px;
                 font-family: $mont, $sans;
                 background-color: $body;
                 border: none;
                 font-size: 1rem;
-                border-radius: rem(10);
+                border-radius: 10px;
                 color: $deep-blue;
             }
 
