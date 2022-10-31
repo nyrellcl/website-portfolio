@@ -52,7 +52,7 @@ ul {
   height: 100vh;
   width: 80%;
   font-size: 3.5rem;
-  background-color: #161d22;
+  background-color: #bababa;
   text-align: right;
   opacity: 0.98;
   transition: all 0.3s linear;
@@ -63,7 +63,7 @@ ul {
   padding: 0.5rem;
 }
 .mobile-menu a {
-  color: #efefef;
+  color: #161d22;
 }
 
 /*will rotate counterclockwise once user presses the icon which will form an X along with bar2*/

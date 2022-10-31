@@ -44,7 +44,7 @@
     height: 100vh;
     width: 80%;
     font-size: 3.5rem;
-    background-color: $deep-blue;
+    background-color: $light-grey;
     text-align: right;
     opacity: 0.98;
     transition: all 0.3s linear;
@@ -54,7 +54,7 @@
         padding: 0.5rem;
     }
     a {
-        color: $body;
+        color: $deep-blue;
     }
 }
 
