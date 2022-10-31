@@ -423,6 +423,7 @@ ul {
   }
   .footer-container {
     height: 20vh;
+    padding: 0;
   }
   .footer-container .footer-bar {
     flex-direction: row;
