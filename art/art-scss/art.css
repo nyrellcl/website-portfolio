@@ -62,9 +62,6 @@ ul {
 .mobile-menu a {
   color: #efefef;
 }
-.mobile-menu li {
-  margin-bottom: 0.625rem;
-}
 
 /*will rotate counterclockwise once user presses the icon which will form an X along with bar2*/
 .open .bar1 {
