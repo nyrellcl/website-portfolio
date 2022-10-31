@@ -91,6 +91,9 @@ body {
   margin-left: auto;
   list-style: none;
 }
+.mobile-menu li {
+  padding: 0.5rem;
+}
 .mobile-menu a {
   color: #efefef;
 }
@@ -109,9 +112,6 @@ body {
   z-index: 3;
   right: 0;
   box-shadow: -1px 9px 90px 180px rgba(45, 50, 77, 0.3490196078);
-}
-.open .mobile-menu li {
-  padding: 0.5rem;
 }
 
 @media only screen and (min-width: 360px) {
