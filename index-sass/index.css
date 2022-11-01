@@ -41,6 +41,7 @@ body {
   opacity: 1;
   transition: all 1.75s ease-in;
   background-color: #efefef;
+  font-family: "Red Hat Display", sans-serif;
 }
 
 .fade {
