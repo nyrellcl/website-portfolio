@@ -215,6 +215,13 @@
                 padding-bottom: 0.5rem;
                 border-bottom: 2px solid $body;
             }
+            
+            &__projects {
+                @include align-flex;
+                justify-content: space-evenly;
+                width: 100%;
+                margin: 1rem auto;
+            }
 
         }
 
