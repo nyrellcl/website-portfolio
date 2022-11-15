@@ -41,7 +41,7 @@ body {
   opacity: 1;
   transition: all 1.75s ease-in;
   background-color: #efefef;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: "Alata", sans-serif;
 }
 
 .fade {
@@ -226,6 +226,13 @@ body {
     color: #efefef;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid #efefef;
+  }
+  .card__content__projects {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 1rem auto;
   }
   .card__desktop {
     display: none;
