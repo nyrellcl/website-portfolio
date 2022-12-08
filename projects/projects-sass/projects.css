@@ -407,6 +407,7 @@ ul {
   }
   .footer-container .footer-bar {
     flex-direction: row;
+    margin-top: 3rem;
   }
   .footer-container .footer-bar .resume-btn {
     transition: all 350ms ease-in-out;

@@ -215,7 +215,7 @@
                 padding-bottom: 0.5rem;
                 border-bottom: 2px solid $body;
             }
-            
+
             &__projects {
                 @include align-flex;
                 justify-content: space-evenly;
@@ -464,6 +464,7 @@
         padding: 0;
         .footer-bar {
             flex-direction: row;
+            margin-top: 3rem;
             .resume-btn{
                 transition: all 350ms ease-in-out;
                 &:hover{
