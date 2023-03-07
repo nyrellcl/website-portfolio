@@ -1,558 +1,729 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3NCP28V9QM"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-3NCP28V9QM"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-3NCP28V9QM');
+      gtag("config", "G-3NCP28V9QM");
     </script>
     <!-- End Google tag (gtag.js) -->
 
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-NTPPP99');</script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NTPPP99");
+    </script>
     <!-- End Google Tag Manager -->
-    <meta name="description" content="Nyrell Leonor's personal website portfolio showcasing
-                self-led projects and technical skills">
-    <meta name="keywords" content="HTML, CSS, SASS, SCSS, JavaScript, Front-End Engineer, Web Development, Web Design">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/621f5eb709.js" crossorigin="anonymous" defer></script>
+    <meta
+      name="description"
+      content="Nyrell Leonor's personal website portfolio showcasing
+                self-led projects and technical skills"
+    />
+    <meta
+      name="keywords"
+      content="HTML, CSS, SASS, SCSS, JavaScript, Front-End Engineer, Web Development, Web Design"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/621f5eb709.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
     <script src="./art.js" defer></script>
-    <link rel="stylesheet" href="./projects-sass/projects.css">
+    <link rel="stylesheet" href="./projects-sass/projects.css" />
     <title>Nyrell Leonor - Projects</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <main>
-        <header class="header-bg">
-            <nav class="desktop-nav-bar">
-                <ul class="desktop-nav-bar__list">
-                    <li><a href="https://www.nyrellcl.com/">Home</a></li>
-                    <li><a href="/about/about.html">About</a></li>
-                    <li><a href="/art/art.html">Art</a></li>
-                    <li><a href="./projects.html">Projects</a></li>
-                </ul>
-            </nav>
+      <header class="header-bg">
+        <nav class="desktop-nav-bar">
+          <ul class="desktop-nav-bar__list">
+            <li><a href="https://www.nyrellcl.com/">Home</a></li>
+            <li><a href="/about/about.html">About</a></li>
+            <li><a href="/art/art.html">Art</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+          </ul>
+        </nav>
 
-            <div class="ham-container">
-                <div id="ham-icon" onclick="toggleMobileMenu(this)">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                    <ul class="mobile-menu">
-                        <li><a href="https://www.nyrellcl.com/">Home</a></li>
-                        <li><a href="/about/about.html">About</a></li>
-                        <li><a href="/art/art.html">Art</a></li>
-                        <li><a href="./projects.html">Projects</a></li>
-                    </ul>
-                </div>
+        <div class="ham-container">
+          <div id="ham-icon" onclick="toggleMobileMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="mobile-menu">
+              <li><a href="https://www.nyrellcl.com/">Home</a></li>
+              <li><a href="/about/about.html">About</a></li>
+              <li><a href="/art/art.html">Art</a></li>
+              <li><a href="./projects.html">Projects</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <section class="project-intro-container">
+          <article class="project-intro-container__contents">
+            <h1>Welcome to my <span class="highlight">projects!</span></h1>
+            <p>
+              Below are the projects I've created so far as a self-taught
+              developer. I still have a lot of ways to go, but I'm proud of the
+              progress I'm making.
+              <span class="highlight"> Learning is forever!</span>
+            </p>
+            <div class="project-intro-container__contents__btn">
+              <a href="#projects"><button>View Projects</button></a>
             </div>
-
-            <section class="project-intro-container">
-                <article class="project-intro-container__contents">
-                    <h1>Welcome to my <span class="highlight">projects!</span></h1>
-                    <p>Below are the projects I've created so far as a self-taught developer. I still have a lot of ways
-                        to go, but I'm proud of the progress I'm making. <span class="highlight"> Learning is
-                            forever!</span></p>
-                    <div class="project-intro-container__contents__btn">
-                        <a href="#projects"><button>View Projects</button></a>
-                    </div>
-                </article>
-            </section>
-        </header>
-
-        <section id="projects">
-            <article class="project-heading">
-                <div class="line"></div>
-                <h2>Projects</h2>
-            </article>
+          </article>
         </section>
+      </header>
 
-        <section id="gallery">
-            <div class="projects-gallery">
+      <section id="projects">
+        <article class="project-heading">
+          <div class="line"></div>
+          <h2>Projects</h2>
+        </article>
+      </section>
 
-                <div class="card-wrapper">
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="/imgs/todo.png" alt="typing-game page" />
-                        </div>
-                        <div class="card__content">
-                            <h3>To-Do List</h3>
-                            <p class="card__content__stack">
-                                HTML, SCSS/SASS, JavaScript, React
-                            </p>
-                            <div class="card__content__projects">
-                                <a href="https://nyrellcl.github.io/todo-app/" target="_blank"
-                                    class="view-proj">View
-                                    Project</a>
-                                <a href="https://github.com/nyrellcl/todo-app" target="_blank"
-                                    class="view-proj">View Code</a>
-                            </div>
-                        </div>
-                        <div class="card__details">
-                            <h3>To-Do List</h3>
-                            <div class="card__details__btn">
-                                <a href="https://nyrellcl.github.io/todo-app/" target="_blank"><button
-                                        class="project">View Project</button></a>
-                                <a href="https://github.com/nyrellcl/todo-app" target="_blank"><button
-                                        class="code">View
-                                        Code</button></a>
-                            </div>
-                        </div>
-                    </div>
-
-                <div class="card-wrapper">
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="/imgs/typing-game.png" alt="typing-game page" />
-                        </div>
-                        <div class="card__content">
-                            <h3>Typing Game</h3>
-                            <p class="card__content__stack">
-                                HTML, SCSS/SASS, JavaScript, React
-                            </p>
-                            <div class="card__content__projects">
-                                <a href="https://nyrellcl.github.io/typing-game/" target="_blank"
-                                    class="view-proj">View
-                                    Project</a>
-                                <a href="https://github.com/nyrellcl/typing-game" target="_blank"
-                                    class="view-proj">View Code</a>
-                            </div>
-                        </div>
-                        <div class="card__details">
-                            <h3>Typing Game</h3>
-                            <div class="card__details__btn">
-                                <a href="https://nyrellcl.github.io/typing-game/" target="_blank"><button
-                                        class="project">View Project</button></a>
-                                <a href="https://github.com/nyrellcl/typing-game" target="_blank"><button
-                                        class="code">View
-                                        Code</button></a>
-                            </div>
-                        </div>
-                    </div>
+      <section id="gallery">
+        <div class="projects-gallery">
+          <div class="card-wrapper">
+            <div class="card">
+              <div class="card-img">
+                <img src="/imgs/todo.png" alt="typing-game page" />
+              </div>
+              <div class="card__content">
+                <h3>To-Do List</h3>
+                <p class="card__content__stack">
+                  HTML, SCSS/SASS, JavaScript, React
+                </p>
+                <div class="card__content__projects">
+                  <a
+                    href="https://nyrellcl.github.io/todo-app/"
+                    target="_blank"
+                    class="view-proj"
+                    >View Project</a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/todo-app"
+                    target="_blank"
+                    class="view-proj"
+                    >View Code</a
+                  >
                 </div>
-
-                <div class="card-wrapper">
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="/imgs/notifications-challenge.png" alt="notifications-challenge page" />
-                        </div>
-                        <div class="card__content">
-                            <h3>Notifications Challenge</h3>
-                            <p class="card__content__stack">
-                                HTML, SCSS/SASS, JavaScript, React
-                            </p>
-                            <div class="card__content__projects">
-                                <a href="https://nyrellcl.github.io/notifications-challenge/" target="_blank"
-                                    class="view-proj">View
-                                    Project</a>
-                                <a href="https://github.com/nyrellcl/notifications-challenge" target="_blank"
-                                    class="view-proj">View Code</a>
-                            </div>
-                        </div>
-                        <div class="card__details">
-                            <h3>Notifications Challenge</h3>
-                            <div class="card__details__btn">
-                                <a href="https://nyrellcl.github.io/notifications-challenge/" target="_blank"><button
-                                        class="project">View Project</button></a>
-                                <a href="https://github.com/nyrellcl/notifications-challenge" target="_blank"><button
-                                        class="code">View
-                                        Code</button></a>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <div class="card__details">
+                <h3>To-Do List</h3>
+                <div class="card__details__btn">
+                  <a href="https://nyrellcl.github.io/todo-app/" target="_blank"
+                    ><button class="project">View Project</button></a
+                  >
+                  <a href="https://github.com/nyrellcl/todo-app" target="_blank"
+                    ><button class="code">View Code</button></a
+                  >
                 </div>
-
-
-                <div class="card-wrapper">
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="/imgs/coffee.png" alt="coffee-roasters page" />
-                        </div>
-                        <div class="card__content">
-                            <h3>Coffeeroasters</h3>
-                            <p class="card__content__stack">
-                                HTML, SCSS/SASS, JavaScript, React
-                            </p>
-                            <div class="card__content__projects">
-                                <a href="https://nyrellcl.github.io/coffee-roasters-react/" target="_blank"
-                                    class="view-proj">View
-                                    Project</a>
-                                <a href="https://github.com/nyrellcl/coffee-roasters-react" target="_blank"
-                                    class="view-proj">View Code</a>
-                            </div>
-                        </div>
-                        <div class="card__details">
-                            <h3>Coffeeroasters</h3>
-                            <div class="card__details__btn">
-                                <a href="https://nyrellcl.github.io/coffee-roasters-react/" target="_blank"><button
-                                        class="project">View Project</button></a>
-                                <a href="https://github.com/nyrellcl/coffee-roasters-react" target="_blank"><button
-                                        class="code">View
-                                        Code</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-wrapper">
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="/imgs/mangata-gallo.png" alt="mangata-gallo page" />
-                        </div>
-                        <div class="card__content">
-                            <h3>Mangata & Gallo</h3>
-                            <p class="card__content__stack">
-                                HTML, SCSS/SASS, JavaScript, React
-                            </p>
-                            <div class="card__content__projects">
-                                <a href="https://nyrellcl.github.io/mangata-gallo-react/" target="_blank"
-                                    class="view-proj">View
-                                    Project</a>
-                                <a href="https://github.com/nyrellcl/mangata-gallo-react" target="_blank"
-                                    class="view-proj">View Code</a>
-                            </div>
-                        </div>
-                        <div class="card__details">
-                            <h3>Mangata & Gallo</h3>
-                            <div class="card__details__btn">
-                                <a href="https://nyrellcl.github.io/mangata-gallo-react/" target="_blank"><button
-                                        class="project">View Project</button></a>
-                                <a href="https://github.com/nyrellcl/mangata-gallo-react" target="_blank"><button
-                                        class="code">View
-                                        Code</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-wrapper">
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="/imgs/myteam.png" alt="myteam page" />
-                        </div>
-                        <div class="card__content">
-                            <h3>MyTeam Multi-Page</h3>
-                            <p class="card__content__stack">
-                                HTML, SCSS/SASS, JavaScript
-                            </p>
-                            <div class="card__content__projects">
-                                <a href="https://keen-lily-45c773.netlify.app/" target="_blank"
-                                    class="view-proj">View
-                                    Project</a>
-                                <a href="https://github.com/nyrellcl/myteam-multi-page" target="_blank"
-                                    class="view-proj">View Code</a>
-                            </div>
-                        </div>
-                        <div class="card__details">
-                            <h3>MyTeam Multi-Page</h3>
-                            <div class="card__details__btn">
-                                <a href="https://keen-lily-45c773.netlify.app/" target="_blank"><button
-                                        class="project">View Project</button></a>
-                                <a href="https://github.com/nyrellcl/myteam-multi-page" target="_blank"><button
-                                        class="code">View
-                                        Code</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-wrapper">
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="/imgs/arch-studio.png" alt="arch-studio" />
-                        </div>
-                        <div class="card__content">
-                            <h3>Arch Studio</h3>
-                            <p class="card__content__stack">
-                                HTML, TailwindCSS, JavaScript, API
-                            </p>
-                            <div class="card__content__projects">
-                                <a href="https://tranquil-yeot-eadbeb.netlify.app/" target="_blank"
-                                    class="view-proj">View
-                                    Project</a>
-                                <a href="https://github.com/nyrellcl/arch-studio" target="_blank"
-                                    class="view-proj">View Code</a>
-
-                            </div>
-                        </div>
-                        <div class="card__details">
-                            <h3>Arch Studio</h3>
-                            <div class="card__details__btn">
-                                <a href="https://tranquil-yeot-eadbeb.netlify.app/" target="_blank"><button
-                                        class="project">View Project</button></a>
-                                <a href="https://github.com/nyrellcl/arch-studio" target="_blank"><button
-                                        class="code">View
-                                        Code</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-wrapper">
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="/imgs/loop-studios.png" alt="loop-studios" />
-                        </div>
-                        <div class="card__content">
-                            <h3>Loopstudios</h3>
-                            <p class="card__content__stack">
-                                HTML, SASS, JavaScript
-                            </p>
-                            <div class="card__content__projects">
-                                <a href="https://stalwart-puffpuff-88d009.netlify.app/" target="_blank"
-                                    class="view-proj">View
-                                    Project</a>
-                                <a href="https://github.com/nyrellcl/loop-studios" target="_blank"
-                                    class="view-proj">View Code</a>
-
-                            </div>
-                        </div>
-                        <div class="card__details">
-                            <h3>Loopstudios</h3>
-                            <div class="card__details__btn">
-                                <a href="https://stalwart-puffpuff-88d009.netlify.app/" target="_blank"><button
-                                        class="project">View Project</button></a>
-                                <a href="https://github.com/nyrellcl/loop-studios" target="_blank"><button
-                                        class="code">View
-                                        Code</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-wrapper">
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="/imgs/manage.png" alt="manage page" />
-                        </div>
-                        <div class="card__content">
-                            <h3>Manage Page</h3>
-                            <p class="card__content__stack">
-                                HTML, SASS, JavaScript
-                            </p>
-                            <div class="card__content__projects">
-                                <a href="https://nyrellcl.github.io/manage-page/" target="_blank"
-                                    class="view-proj">View
-                                    Project</a>
-                                <a href="https://github.com/nyrellcl/manage-page" target="_blank"
-                                    class="view-proj">View Code</a>
-                            </div>
-                        </div>
-                        <div class="card__details">
-                            <h3>Manage Page</h3>
-                            <div class="card__details__btn">
-                                <a href="https://nyrellcl.github.io/manage-page/" target="_blank"><button
-                                        class="project">View Project</button></a>
-                                <a href="https://github.com/nyrellcl/manage-page" target="_blank"><button
-                                        class="code">View
-                                        Code</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-wrapper">
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="/imgs/advice.png" alt="advice-generator">
-                        </div>
-                        <div class="card__content">
-                            <h3>Advice Generator</h3>
-                            <p class="card__content__stack">
-                                HTML, SASS, JavaScript, API
-                            </p>
-                            <div class="card__content__projects">
-                                <a href="https://nyrellcl.github.io/advice-generator/" target="_blank"
-                                    class="view-proj">View
-                                    Project</a>
-                                <a href="https://github.com/nyrellcl/advice-generator" target="_blank"
-                                    class="view-proj">View Code</a>
-
-                            </div>
-                        </div>
-                        <div class="card__details">
-                            <h3>Advice Generator</h3>
-                            <div class="card__details__btn">
-                                <a href="https://nyrellcl.github.io/advice-generator/" target="_blank"><button
-                                        class="project">View Project</button></a>
-                                <a href="https://github.com/nyrellcl/advice-generator" target="_blank"><button
-                                        class="code">View Code</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-wrapper">
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="/imgs/clipboard.png" alt="clipboard page">
-                        </div>
-                        <div class="card__content">
-                            <h3>Clipboard</h3>
-                            <p class="card__content__stack">
-                                HTML, SASS, JavaScript
-                            </p>
-                            <div class="card__content__projects">
-                                <a href="https://nyrellcl.github.io/clipboard/" target="_blank" class="view-proj">View
-                                    Project</a>
-                                    <a href="https://github.com/nyrellcl/clipboard" target="_blank" class="view-proj">View Code</a>
-
-                            </div>
-                        </div>
-                        <div class="card__details">
-                            <h3>Clipboard</h3>
-                            <div class="card__details__btn">
-                                <a href="https://nyrellcl.github.io/clipboard/" target="_blank"><button
-                                        class="project">View
-                                        Project</button></a>
-                                <a href="https://github.com/nyrellcl/clipboard" target="_blank"><button
-                                        class="code">View
-                                        Code</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-wrapper">
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="/imgs/single-page.png" alt="single-page">
-                        </div>
-                        <div class="card__content">
-                            <h3>Single Page Design</h3>
-                            <p class="card__content__stack">
-                                HTML, CSS, SASS
-                            </p>
-                            <div class="card__content__projects">
-                                <a href="https://nyrellcl.github.io/single-landing-page/" target="_blank"
-                                    class="view-proj">View
-                                    Project</a>
-                                    <a href="https://github.com/nyrellcl/single-landing-page" target="_blank" class="view-proj">View Code</a>
-
-                            </div>
-                        </div>
-                        <div class="card__details">
-                            <h3>Single Page Design</h3>
-                            <div class="card__details__btn">
-                                <a href="https://nyrellcl.github.io/single-landing-page/" target="_blank"><button
-                                        class="project">View Project</button></a>
-                                <a href="https://github.com/nyrellcl/single-landing-page" target="_blank"><button
-                                        class="code">View Code</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-wrapper">
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="/imgs/easybank.png" alt="easybank page" />
-                        </div>
-                        <div class="card__content">
-                            <h3>Easybank</h3>
-                            <p class="card__content__stack">
-                                HTML, SASS, JavaScript
-                            </p>
-                            <div class="card__content__projects">
-                                <a href="https://nyrellcl.github.io/easybank/" target="_blank" class="view-proj">View
-                                    Project</a>
-                                    <a href="https://github.com/nyrellcl/easybank" target="_blank" class="view-proj">View Code</a>
-
-                            </div>
-                        </div>
-                        <div class="card__details">
-                            <h3>Easybank</h3>
-                            <div class="card__details__btn">
-                                <a href="https://nyrellcl.github.io/easybank/" target="_blank"><button
-                                        class="project">View
-                                        Project</button></a>
-                                <a href="https://github.com/nyrellcl/easybank" target="_blank"><button class="code">View
-                                        Code</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-wrapper">
-                    <div class="card">
-                        <div class="card-img">
-                            <img src="/imgs/huddle.png" alt="huddle page">
-                        </div>
-                        <div class="card__content">
-                            <h3>Huddle</h3>
-                            <p class="card__content__stack">
-                                HTML, CSS, JavaScript
-                            </p>
-                            <div class="card__content__projects">
-                                <a href="https://nyrellcl.github.io/Huddle-Landing-Page/" target="_blank"
-                                    class="view-proj">View
-                                    Project</a>
-                                    <a href="https://github.com/nyrellcl/Huddle-Landing-Page" target="_blank" class="view-proj">View Code</a>
-
-                            </div>
-                        </div>
-                        <div class="card__details">
-                            <h3>Huddle</h3>
-                            <div class="card__details__btn">
-                                <a href="https://nyrellcl.github.io/Huddle-Landing-Page/" target="_blank"><button
-                                        class="project">View Project</button></a>
-                                <a href="https://github.com/nyrellcl/Huddle-Landing-Page" target=" _blank"><button
-                                        class="code">View Code</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-        </section>
+          </div>
 
+          <div class="card-wrapper">
+            <div class="card">
+              <div class="card-img">
+                <img src="/imgs/typing-game.png" alt="typing-game page" />
+              </div>
+              <div class="card__content">
+                <h3>Typing Game</h3>
+                <p class="card__content__stack">
+                  HTML, SCSS/SASS, JavaScript, React
+                </p>
+                <div class="card__content__projects">
+                  <a
+                    href="https://nyrellcl.github.io/typing-game/"
+                    target="_blank"
+                    class="view-proj"
+                    >View Project</a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/typing-game"
+                    target="_blank"
+                    class="view-proj"
+                    >View Code</a
+                  >
+                </div>
+              </div>
+              <div class="card__details">
+                <h3>Typing Game</h3>
+                <div class="card__details__btn">
+                  <a
+                    href="https://nyrellcl.github.io/typing-game/"
+                    target="_blank"
+                    ><button class="project">View Project</button></a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/typing-game"
+                    target="_blank"
+                    ><button class="code">View Code</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-wrapper">
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="/imgs/notifications-challenge.png"
+                  alt="notifications-challenge page"
+                />
+              </div>
+              <div class="card__content">
+                <h3>Notifications Challenge</h3>
+                <p class="card__content__stack">
+                  HTML, SCSS/SASS, JavaScript, React
+                </p>
+                <div class="card__content__projects">
+                  <a
+                    href="https://nyrellcl.github.io/notifications-challenge/"
+                    target="_blank"
+                    class="view-proj"
+                    >View Project</a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/notifications-challenge"
+                    target="_blank"
+                    class="view-proj"
+                    >View Code</a
+                  >
+                </div>
+              </div>
+              <div class="card__details">
+                <h3>Notifications Challenge</h3>
+                <div class="card__details__btn">
+                  <a
+                    href="https://nyrellcl.github.io/notifications-challenge/"
+                    target="_blank"
+                    ><button class="project">View Project</button></a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/notifications-challenge"
+                    target="_blank"
+                    ><button class="code">View Code</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-wrapper">
+            <div class="card">
+              <div class="card-img">
+                <img src="/imgs/coffee.png" alt="coffee-roasters page" />
+              </div>
+              <div class="card__content">
+                <h3>Coffeeroasters</h3>
+                <p class="card__content__stack">
+                  HTML, SCSS/SASS, JavaScript, React
+                </p>
+                <div class="card__content__projects">
+                  <a
+                    href="https://nyrellcl.github.io/coffee-roasters-react/"
+                    target="_blank"
+                    class="view-proj"
+                    >View Project</a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/coffee-roasters-react"
+                    target="_blank"
+                    class="view-proj"
+                    >View Code</a
+                  >
+                </div>
+              </div>
+              <div class="card__details">
+                <h3>Coffeeroasters</h3>
+                <div class="card__details__btn">
+                  <a
+                    href="https://nyrellcl.github.io/coffee-roasters-react/"
+                    target="_blank"
+                    ><button class="project">View Project</button></a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/coffee-roasters-react"
+                    target="_blank"
+                    ><button class="code">View Code</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-wrapper">
+            <div class="card">
+              <div class="card-img">
+                <img src="/imgs/mangata-gallo.png" alt="mangata-gallo page" />
+              </div>
+              <div class="card__content">
+                <h3>Mangata & Gallo</h3>
+                <p class="card__content__stack">
+                  HTML, SCSS/SASS, JavaScript, React
+                </p>
+                <div class="card__content__projects">
+                  <a
+                    href="https://nyrellcl.github.io/mangata-gallo-react/"
+                    target="_blank"
+                    class="view-proj"
+                    >View Project</a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/mangata-gallo-react"
+                    target="_blank"
+                    class="view-proj"
+                    >View Code</a
+                  >
+                </div>
+              </div>
+              <div class="card__details">
+                <h3>Mangata & Gallo</h3>
+                <div class="card__details__btn">
+                  <a
+                    href="https://nyrellcl.github.io/mangata-gallo-react/"
+                    target="_blank"
+                    ><button class="project">View Project</button></a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/mangata-gallo-react"
+                    target="_blank"
+                    ><button class="code">View Code</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-wrapper">
+            <div class="card">
+              <div class="card-img">
+                <img src="/imgs/myteam.png" alt="myteam page" />
+              </div>
+              <div class="card__content">
+                <h3>MyTeam Multi-Page</h3>
+                <p class="card__content__stack">HTML, SCSS/SASS, JavaScript</p>
+                <div class="card__content__projects">
+                  <a
+                    href="https://keen-lily-45c773.netlify.app/"
+                    target="_blank"
+                    class="view-proj"
+                    >View Project</a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/myteam-multi-page"
+                    target="_blank"
+                    class="view-proj"
+                    >View Code</a
+                  >
+                </div>
+              </div>
+              <div class="card__details">
+                <h3>MyTeam Multi-Page</h3>
+                <div class="card__details__btn">
+                  <a
+                    href="https://keen-lily-45c773.netlify.app/"
+                    target="_blank"
+                    ><button class="project">View Project</button></a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/myteam-multi-page"
+                    target="_blank"
+                    ><button class="code">View Code</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-wrapper">
+            <div class="card">
+              <div class="card-img">
+                <img src="/imgs/arch-studio.png" alt="arch-studio" />
+              </div>
+              <div class="card__content">
+                <h3>Arch Studio</h3>
+                <p class="card__content__stack">
+                  HTML, TailwindCSS, JavaScript, API
+                </p>
+                <div class="card__content__projects">
+                  <a
+                    href="https://tranquil-yeot-eadbeb.netlify.app/"
+                    target="_blank"
+                    class="view-proj"
+                    >View Project</a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/arch-studio"
+                    target="_blank"
+                    class="view-proj"
+                    >View Code</a
+                  >
+                </div>
+              </div>
+              <div class="card__details">
+                <h3>Arch Studio</h3>
+                <div class="card__details__btn">
+                  <a
+                    href="https://tranquil-yeot-eadbeb.netlify.app/"
+                    target="_blank"
+                    ><button class="project">View Project</button></a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/arch-studio"
+                    target="_blank"
+                    ><button class="code">View Code</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-wrapper">
+            <div class="card">
+              <div class="card-img">
+                <img src="/imgs/loop-studios.png" alt="loop-studios" />
+              </div>
+              <div class="card__content">
+                <h3>Loopstudios</h3>
+                <p class="card__content__stack">HTML, SASS, JavaScript</p>
+                <div class="card__content__projects">
+                  <a
+                    href="https://stalwart-puffpuff-88d009.netlify.app/"
+                    target="_blank"
+                    class="view-proj"
+                    >View Project</a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/loop-studios"
+                    target="_blank"
+                    class="view-proj"
+                    >View Code</a
+                  >
+                </div>
+              </div>
+              <div class="card__details">
+                <h3>Loopstudios</h3>
+                <div class="card__details__btn">
+                  <a
+                    href="https://stalwart-puffpuff-88d009.netlify.app/"
+                    target="_blank"
+                    ><button class="project">View Project</button></a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/loop-studios"
+                    target="_blank"
+                    ><button class="code">View Code</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-wrapper">
+            <div class="card">
+              <div class="card-img">
+                <img src="/imgs/manage.png" alt="manage page" />
+              </div>
+              <div class="card__content">
+                <h3>Manage Page</h3>
+                <p class="card__content__stack">HTML, SASS, JavaScript</p>
+                <div class="card__content__projects">
+                  <a
+                    href="https://nyrellcl.github.io/manage-page/"
+                    target="_blank"
+                    class="view-proj"
+                    >View Project</a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/manage-page"
+                    target="_blank"
+                    class="view-proj"
+                    >View Code</a
+                  >
+                </div>
+              </div>
+              <div class="card__details">
+                <h3>Manage Page</h3>
+                <div class="card__details__btn">
+                  <a
+                    href="https://nyrellcl.github.io/manage-page/"
+                    target="_blank"
+                    ><button class="project">View Project</button></a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/manage-page"
+                    target="_blank"
+                    ><button class="code">View Code</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-wrapper">
+            <div class="card">
+              <div class="card-img">
+                <img src="/imgs/advice.png" alt="advice-generator" />
+              </div>
+              <div class="card__content">
+                <h3>Advice Generator</h3>
+                <p class="card__content__stack">HTML, SASS, JavaScript, API</p>
+                <div class="card__content__projects">
+                  <a
+                    href="https://nyrellcl.github.io/advice-generator/"
+                    target="_blank"
+                    class="view-proj"
+                    >View Project</a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/advice-generator"
+                    target="_blank"
+                    class="view-proj"
+                    >View Code</a
+                  >
+                </div>
+              </div>
+              <div class="card__details">
+                <h3>Advice Generator</h3>
+                <div class="card__details__btn">
+                  <a
+                    href="https://nyrellcl.github.io/advice-generator/"
+                    target="_blank"
+                    ><button class="project">View Project</button></a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/advice-generator"
+                    target="_blank"
+                    ><button class="code">View Code</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-wrapper">
+            <div class="card">
+              <div class="card-img">
+                <img src="/imgs/clipboard.png" alt="clipboard page" />
+              </div>
+              <div class="card__content">
+                <h3>Clipboard</h3>
+                <p class="card__content__stack">HTML, SASS, JavaScript</p>
+                <div class="card__content__projects">
+                  <a
+                    href="https://nyrellcl.github.io/clipboard/"
+                    target="_blank"
+                    class="view-proj"
+                    >View Project</a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/clipboard"
+                    target="_blank"
+                    class="view-proj"
+                    >View Code</a
+                  >
+                </div>
+              </div>
+              <div class="card__details">
+                <h3>Clipboard</h3>
+                <div class="card__details__btn">
+                  <a
+                    href="https://nyrellcl.github.io/clipboard/"
+                    target="_blank"
+                    ><button class="project">View Project</button></a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/clipboard"
+                    target="_blank"
+                    ><button class="code">View Code</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-wrapper">
+            <div class="card">
+              <div class="card-img">
+                <img src="/imgs/single-page.png" alt="single-page" />
+              </div>
+              <div class="card__content">
+                <h3>Single Page Design</h3>
+                <p class="card__content__stack">HTML, CSS, SASS</p>
+                <div class="card__content__projects">
+                  <a
+                    href="https://nyrellcl.github.io/single-landing-page/"
+                    target="_blank"
+                    class="view-proj"
+                    >View Project</a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/single-landing-page"
+                    target="_blank"
+                    class="view-proj"
+                    >View Code</a
+                  >
+                </div>
+              </div>
+              <div class="card__details">
+                <h3>Single Page Design</h3>
+                <div class="card__details__btn">
+                  <a
+                    href="https://nyrellcl.github.io/single-landing-page/"
+                    target="_blank"
+                    ><button class="project">View Project</button></a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/single-landing-page"
+                    target="_blank"
+                    ><button class="code">View Code</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-wrapper">
+            <div class="card">
+              <div class="card-img">
+                <img src="/imgs/easybank.png" alt="easybank page" />
+              </div>
+              <div class="card__content">
+                <h3>Easybank</h3>
+                <p class="card__content__stack">HTML, SASS, JavaScript</p>
+                <div class="card__content__projects">
+                  <a
+                    href="https://nyrellcl.github.io/easybank/"
+                    target="_blank"
+                    class="view-proj"
+                    >View Project</a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/easybank"
+                    target="_blank"
+                    class="view-proj"
+                    >View Code</a
+                  >
+                </div>
+              </div>
+              <div class="card__details">
+                <h3>Easybank</h3>
+                <div class="card__details__btn">
+                  <a href="https://nyrellcl.github.io/easybank/" target="_blank"
+                    ><button class="project">View Project</button></a
+                  >
+                  <a href="https://github.com/nyrellcl/easybank" target="_blank"
+                    ><button class="code">View Code</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-wrapper">
+            <div class="card">
+              <div class="card-img">
+                <img src="/imgs/huddle.png" alt="huddle page" />
+              </div>
+              <div class="card__content">
+                <h3>Huddle</h3>
+                <p class="card__content__stack">HTML, CSS, JavaScript</p>
+                <div class="card__content__projects">
+                  <a
+                    href="https://nyrellcl.github.io/Huddle-Landing-Page/"
+                    target="_blank"
+                    class="view-proj"
+                    >View Project</a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/Huddle-Landing-Page"
+                    target="_blank"
+                    class="view-proj"
+                    >View Code</a
+                  >
+                </div>
+              </div>
+              <div class="card__details">
+                <h3>Huddle</h3>
+                <div class="card__details__btn">
+                  <a
+                    href="https://nyrellcl.github.io/Huddle-Landing-Page/"
+                    target="_blank"
+                    ><button class="project">View Project</button></a
+                  >
+                  <a
+                    href="https://github.com/nyrellcl/Huddle-Landing-Page"
+                    target=" _blank"
+                    ><button class="code">View Code</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer-container">
-        <nav class="footer-bar">
-            <small class="attribution">
-                <h4>Design & code by Nyrell Leonor &copy; 2023</h4>
-            </small>
-            <ul class="footer-bar__list">
-                <a href="https://www.nyrellcl.com/">
-                    <li>Home</li>
-                </a>
-                <a href="/about/about.html">
-                    <li>About</li>
-                </a>
-                <a href="/art/art.html">
-                    <li>Art</li>
-                </a>
-                <a href="/projects/projects.html">
-                    <li>Projects</li>
-                </a>
-            </ul>
-            <a href="/imgs/Nyrell Leonor Resume-CV.pdf" download alt="Nyrell Leonor Resume"><button id="resume"
-                    class="resume-btn">View My Resume</button></a>
-        </nav>
-
+      <nav class="footer-bar">
+        <small class="attribution">
+          <h4>Design & code by Nyrell Leonor &copy; 2023</h4>
+        </small>
+        <ul class="footer-bar__list">
+          <a href="https://www.nyrellcl.com/">
+            <li>Home</li>
+          </a>
+          <a href="/about/about.html">
+            <li>About</li>
+          </a>
+          <a href="/art/art.html">
+            <li>Art</li>
+          </a>
+          <a href="/projects/projects.html">
+            <li>Projects</li>
+          </a>
+        </ul>
+        <a
+          href="/imgs/Nyrell Leonor Resume-CV.pdf"
+          download
+          alt="Nyrell Leonor Resume"
+          ><button id="resume" class="resume-btn">View My Resume</button></a
+        >
+      </nav>
     </footer>
 
-
     <script>
-        //mobile menu
-        function toggleMobileMenu(menu) {
-            menu.classList.toggle('open');
-        } /*for when the user opens the hamburger menu*/
+      //mobile menu
+      function toggleMobileMenu(menu) {
+        menu.classList.toggle("open");
+      } /*for when the user opens the hamburger menu*/
     </script>
-</body>
-
+  </body>
 </html>
