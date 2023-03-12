@@ -1,213 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3NCP28V9QM"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-3NCP28V9QM"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-3NCP28V9QM');
+      gtag("config", "G-3NCP28V9QM");
     </script>
     <!-- End Google tag (gtag.js) -->
 
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-NTPPP99');</script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NTPPP99");
+    </script>
     <!-- End Google Tag Manager -->
-    <meta name="description" content="Nyrell Leonor's personal website portfolio showcasing
-        self-led projects and technical skills">
-    <meta name="keywords" content="HTML, CSS, SASS, SCSS, JavaScript, Front-End Engineer, Web Development, About">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/621f5eb709.js" crossorigin="anonymous" defer></script>
+    <meta
+      name="description"
+      content="Nyrell Leonor's personal website portfolio showcasing
+        self-led projects and technical skills"
+    />
+    <meta
+      name="keywords"
+      content="HTML, CSS, SASS, SCSS, JavaScript, Front-End Engineer, Web Development, About"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/621f5eb709.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
     <script src="./script.js" defer></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./about-sass/about.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./about-sass/about.css" />
     <title>Nyrell Leonor - About</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <main>
-        <header class="header-bg">
-            <nav class="desktop-nav-bar">
-                <ul class="desktop-nav-bar__list">
-                    <li><a href="https://www.nyrellcl.com/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/art/art.html">Art</a></li>
-                    <li><a href="/projects/projects.html">Projects</a></li>
-                </ul>
-            </nav>
+      <header class="header-bg">
+        <nav class="desktop-nav-bar">
+          <ul class="desktop-nav-bar__list">
+            <li><a href="https://www.nyrellcl.com/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/art/art.html">Art</a></li>
+            <li><a href="/projects/projects.html">Projects</a></li>
+          </ul>
+        </nav>
 
-            <div class="ham-container">
-                <div id="ham-icon" onclick="toggleMobileMenu(this)">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                    <ul class="mobile-menu">
-                        <li><a href="https://www.nyrellcl.com/">Home</a></li>
-                        <li><a href="/">About</a></li>
-                        <li><a href="/art/art.html">Art</a></li>
-                        <li><a href="/projects/projects.html">Projects</a></li>
-                    </ul>
-                </div>
-            </div>
+        <div class="ham-container">
+          <div id="ham-icon" onclick="toggleMobileMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="mobile-menu">
+              <li><a href="https://www.nyrellcl.com/">Home</a></li>
+              <li><a href="/">About</a></li>
+              <li><a href="/art/art.html">Art</a></li>
+              <li><a href="/projects/projects.html">Projects</a></li>
+            </ul>
+          </div>
+        </div>
 
-            <section class="about-container">
-                <div class="about-container__title">
-                    <span>A</span>
-                    <span>B</span>
-                    <span>O</span>
-                    <span>U</span>
-                    <span>T</span>
-                    <span>M</span>
-                    <span>E</span>
-                    <a href="#about"><ion-icon name="arrow-down-circle"></ion-icon></a>
-                </div>
-            </section>
-        </header>
-
-        <section id="about">
-            <div class="intro-wrapper">
-            <article class="intro-wrapper__container">
-                <h1>Nyrell Leonor</h1>
-                <div class="line"></div>
-                <div class="intro-wrapper__container__content">
-                    <p>Since beginning my journey learning Front-End in 2021, I've created projects that I didn't even think of being able to create when I first started.
-                        From simple card designs using HTML and CSS to building multi-page websites alongside API's!
-                    </p>
-                    <br>
-                    <p>My learning journey has been a great eye-opener and something that I enjoy doing. Currently, I am strengthening my skills as a front-end developer by constantly creating projects, learning frameworks, and refining my knowledge in HTML, CSS, and JavaScript.</p>
-                </div>
-
-                <div class="line"></div>
-
-                <div class="intro-wrapper__container__skills">
-                    <h2>Learning and creating with...</h2>
-                    <div class="intro-wrapper__container__skills__grid">
-
-                        <div class="intro-wrapper__container__skills__grid__card">
-                            <i class="fa-brands fa-html5 fa-4x"></i>
-                            <div class="intro-wrapper__container__skills__grid__card__content">
-                                <h3>HTML5</h3>
-                                <p>The markup language used for structuring and presenting content.</p>
-                            </div>
-                        </div>
-
-                        <div class="intro-wrapper__container__skills__grid__card">
-                            <i class="fa-brands fa-css3-alt fa-4x"></i>
-                            <div class="intro-wrapper__container__skills__grid__card__content">
-                                <h3>CSS3</h3>
-                                <p>The standard used in the styling and formatting of web pages.</p>
-                            </div>
-                        </div>
-
-                        <div class="intro-wrapper__container__skills__grid__card">
-                            <i class="fa-brands fa-sass fa-4x"></i>
-                            <div class="intro-wrapper__container__skills__grid__card__content">
-                                <h3>SASS</h3>
-                                <p>A preprocessor language that is compiled into CSS. Sass lets you use features that do not exist in CSS, like variables, nested rules, mixins, imports, inheritance, built-in functions and much more!</p>
-                            </div>
-                        </div>
-
-                        <div class="intro-wrapper__container__skills__grid__card">
-                            <i class="fa-brands fa-js fa-4x"></i>
-                            <div class="intro-wrapper__container__skills__grid__card__content">
-                                <h3>JavaScript</h3>
-                                <p>A text-based programming language used both on the client-side and server-side that allows you to make web pages interactive.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="intro-wrapper__container__skills__grid__card">
-                            <i class="fa-brands fab fa-git-alt fa-4x"></i>
-                            <div class="intro-wrapper__container__skills__grid__card__content">
-                                <h3>Git</h3>
-                                <p>An open source software for distributed version control. It is used to track changes in the source code, enabling multiple developers to collaborate on non-linear development.</p>
-                            </div>
-                        </div>    
-
-                        <div class="intro-wrapper__container__skills__grid__card">
-                            <img src="/imgs/tailwindcss-mark.79614a5f61617ba49a0891494521226b.svg" alt="tailwindcss-mark">
-                            <div class="intro-wrapper__container__skills__grid__card__content">
-                                <h3>Tailwind</h3>
-                                <p>An open source CSS framework.</p>
-                            </div>
-                        </div>
-
-                        <div class="intro-wrapper__container__skills__grid__card">
-                            <i class="fa-brands fa-react fa-4x"></i>
-                            <div class="intro-wrapper__container__skills__grid__card__content">
-                                <h3>React.js</h3>
-                                <p>An open source JavaScript library for building user interfaces by creating UI components.</p>
-                            </div>
-                        </div>
-
-                        <div class="intro-wrapper__container__skills__grid__card">
-                            <i class="fa-brands fa-npm fa-4x"></i>
-                            <div class="intro-wrapper__container__skills__grid__card__content">
-                                <h3>Node Package Manager</h3>
-                                <p>The world's largest software registry. It is a command line tool that installs, updates, or uninstalls Node.js packages for an application.</p>
-                            </div>
-                        </div>
-
-                        
-    
-                    </div>
-                </div>
-            </article>
-
-            </div>
+        <section class="about-container">
+          <div class="about-container__title">
+            <span>A</span>
+            <span>B</span>
+            <span>O</span>
+            <span>U</span>
+            <span>T</span>
+            <span>M</span>
+            <span>E</span>
+            <a href="#about"><ion-icon name="arrow-down-circle"></ion-icon></a>
+          </div>
         </section>
+      </header>
 
-        
+      <section id="about">
+        <div class="intro-wrapper">
+          <article class="intro-wrapper__container">
+            <h1>Nyrell Leonor</h1>
+            <div class="line"></div>
+            <div class="intro-wrapper__container__content">
+              <p>
+                Since beginning my journey learning Front-End in 2021, I've
+                created projects that I didn't even think of being able to
+                create when I first started. From simple card designs using HTML
+                and CSS to building multi-page websites alongside API's!
+              </p>
+              <br />
+              <p>
+                My learning journey has been a great eye-opener and something
+                that I enjoy doing. Currently, I am strengthening my skills as a
+                front-end developer by constantly creating projects, learning
+                frameworks, and refining my knowledge in HTML, CSS, and
+                JavaScript.
+              </p>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="intro-wrapper__container__skills">
+              <h2>Learning and creating with...</h2>
+              <div class="intro-wrapper__container__skills__grid">
+                <div class="intro-wrapper__container__skills__grid__card">
+                  <i class="fa-brands fa-html5 fa-4x"></i>
+                  <div
+                    class="intro-wrapper__container__skills__grid__card__content"
+                  >
+                    <h3>HTML5</h3>
+                    <p>
+                      The markup language used for structuring and presenting
+                      content.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="intro-wrapper__container__skills__grid__card">
+                  <i class="fa-brands fa-css3-alt fa-4x"></i>
+                  <div
+                    class="intro-wrapper__container__skills__grid__card__content"
+                  >
+                    <h3>CSS3</h3>
+                    <p>
+                      The standard used in the styling and formatting of web
+                      pages.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="intro-wrapper__container__skills__grid__card">
+                  <i class="fa-brands fa-sass fa-4x"></i>
+                  <div
+                    class="intro-wrapper__container__skills__grid__card__content"
+                  >
+                    <h3>SASS</h3>
+                    <p>
+                      A preprocessor language that is compiled into CSS. Sass
+                      lets you use features that do not exist in CSS, like
+                      variables, nested rules, mixins, imports, inheritance,
+                      built-in functions and much more!
+                    </p>
+                  </div>
+                </div>
+
+                <div class="intro-wrapper__container__skills__grid__card">
+                  <i class="fa-brands fa-js fa-4x"></i>
+                  <div
+                    class="intro-wrapper__container__skills__grid__card__content"
+                  >
+                    <h3>JavaScript</h3>
+                    <p>
+                      A text-based programming language used both on the
+                      client-side and server-side that allows you to make web
+                      pages interactive.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="intro-wrapper__container__skills__grid__card">
+                  <i class="fa-brands fab fa-git-alt fa-4x"></i>
+                  <div
+                    class="intro-wrapper__container__skills__grid__card__content"
+                  >
+                    <h3>Git</h3>
+                    <p>
+                      An open source software for distributed version control.
+                      It is used to track changes in the source code, enabling
+                      multiple developers to collaborate on non-linear
+                      development.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="intro-wrapper__container__skills__grid__card">
+                  <img
+                    src="/imgs/tailwindcss-mark.79614a5f61617ba49a0891494521226b.svg"
+                    alt="tailwindcss-mark"
+                  />
+                  <div
+                    class="intro-wrapper__container__skills__grid__card__content"
+                  >
+                    <h3>Tailwind</h3>
+                    <p>An open source CSS framework.</p>
+                  </div>
+                </div>
+
+                <div class="intro-wrapper__container__skills__grid__card">
+                  <i class="fa-brands fa-react fa-4x"></i>
+                  <div
+                    class="intro-wrapper__container__skills__grid__card__content"
+                  >
+                    <h3>React.js</h3>
+                    <p>
+                      An open source JavaScript library for building user
+                      interfaces by creating UI components.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="intro-wrapper__container__skills__grid__card">
+                  <i class="fa-brands fa-npm fa-4x"></i>
+                  <div
+                    class="intro-wrapper__container__skills__grid__card__content"
+                  >
+                    <h3>Node Package Manager</h3>
+                    <p>
+                      The world's largest software registry. It is a command
+                      line tool that installs, updates, or uninstalls Node.js
+                      packages for an application.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="intro-wrapper__container__skills__grid__card">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    width="64"
+                    height="64"
+                    viewBox="0,0,256,256"
+                    style="fill: #000000"
+                  >
+                    <g
+                      fill="#ffffff"
+                      fill-rule="nonzero"
+                      stroke="none"
+                      stroke-width="1"
+                      stroke-linecap="butt"
+                      stroke-linejoin="miter"
+                      stroke-miterlimit="10"
+                      stroke-dasharray=""
+                      stroke-dashoffset="0"
+                      font-family="none"
+                      font-weight="none"
+                      font-size="none"
+                      text-anchor="none"
+                      style="mix-blend-mode: normal"
+                    >
+                      <g transform="scale(5.12,5.12)">
+                        <path
+                          d="M5,4c-0.55226,0.00006 -0.99994,0.44774 -1,1v40c0.00006,0.55226 0.44774,0.99994 1,1h40c0.55226,-0.00006 0.99994,-0.44774 1,-1v-40c-0.00006,-0.55226 -0.44774,-0.99994 -1,-1zM6,6h38v38h-38zM15,23v3.44531h5v15.55469h4v-15.55469h5v-3.44531zM36.69141,23.00977c-3.11462,-0.0124 -6.67383,0.93145 -6.67383,5.31445c0,5.73 7.7207,5.73141 7.7207,8.31641c0,0.245 0.10391,2.02539 -2.62109,2.02539c-2.725,0 -4.99609,-1.71289 -4.99609,-1.71289v4.1582c0,0 11.88086,3.84273 11.88086,-4.82227c-0.001,-5.625 -7.79297,-5.34367 -7.79297,-8.13867c0,-1.083 0.76939,-2.0957 2.90039,-2.0957c2.131,0 4.01758,1.25781 4.01758,1.25781l0.14063,-3.70508c0,0 -2.15369,-0.58801 -4.57617,-0.59766z"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                  <div
+                    class="intro-wrapper__container__skills__grid__card__content"
+                  >
+                    <h3>TypeScript</h3>
+                    <p>
+                      TypeScript is a strongly typed programming language that
+                      builds on JavaScript. It is designed for the development
+                      of large applications and transpiles to JavaScript.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
 
     <footer class="footer-container">
-        <nav class="footer-bar">
-            <small class="attribution">
-                <p>Design & code by Nyrell Leonor &copy; 2023</p>
-            </small>
-            <ul class="footer-bar__list">
-                <a href="https://www.nyrellcl.com/">
-                    <li>Home</li>
-                </a>
-                <a href="/">
-                    <li>About</li>
-                </a>
-                <a href="/art/art.html">
-                    <li>Art</li>
-                </a>
-                <a href="/projects/projects.html">
-                    <li>Projects</li>
-                </a>
-            </ul>
-            <a href="/imgs/Nyrell Leonor Resume-CV.pdf" download alt="Nyrell Leonor Resume"><button id="resume"
-                    class="resume-btn">View My Resume</button></a>
-        </nav>
-
+      <nav class="footer-bar">
+        <small class="attribution">
+          <p>Design & code by Nyrell Leonor &copy; 2023</p>
+        </small>
+        <ul class="footer-bar__list">
+          <a href="https://www.nyrellcl.com/">
+            <li>Home</li>
+          </a>
+          <a href="/">
+            <li>About</li>
+          </a>
+          <a href="/art/art.html">
+            <li>Art</li>
+          </a>
+          <a href="/projects/projects.html">
+            <li>Projects</li>
+          </a>
+        </ul>
+        <a
+          href="/imgs/Nyrell Leonor Resume-CV.pdf"
+          download
+          alt="Nyrell Leonor Resume"
+          ><button id="resume" class="resume-btn">View My Resume</button></a
+        >
+      </nav>
     </footer>
 
     <script>
-        //mobile menu
-        function toggleMobileMenu(menu) {
-            menu.classList.toggle('open');
-        } /*for when the user opens the hamburger menu*/
-
+      //mobile menu
+      function toggleMobileMenu(menu) {
+        menu.classList.toggle("open");
+      } /*for when the user opens the hamburger menu*/
     </script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
-
-
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
